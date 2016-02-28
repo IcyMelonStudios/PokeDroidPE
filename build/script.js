@@ -269,7 +269,6 @@ ModPE.setItem(722, "lid", 1, "Great Ball Lid");
 ModPE.setItem(723, "lid", 2, "Ultra Ball Lid");
 ModPE.setItem(724, "lid", 3, "Master Ball Lid");
 ModPE.setItem(725, "ironbase", 0, "Iron Base");
-ModPE.setItem(726, "stone_button", 0, "Stone Button");
 
 ModPE.setItem(729, "pokedex", 0, "Pokedex", 1);
 
@@ -296,7 +295,7 @@ ModPE.setItem(718, "badge", 5, "Jet Badge");
 ModPE.setItem(719, "badge", 6, "Freeze Badge");
 ModPE.setItem(720, "badge", 7, "Legend Badge");
 */
-/*
+
 Item.addFurnaceRecipe(700, 707);
 Item.addFurnaceRecipe(701, 708);
 Item.addFurnaceRecipe(702, 709);
@@ -325,35 +324,28 @@ Item.addShapedRecipe(716, 1, 0, [
 " b ",
 " i "
 ],
-["l", 721, 0, "b", 726, 0, "i", 725,0]);
+["l", 721, 0, "b", 77, 0, "i", 725,0]);
 
 Item.addShapedRecipe(717, 1, 0, [
 " l ",
 " b ",
 " i "
 ],
-["l", 722, 0, "b", 726, 0, "i", 725,0]);
+["l", 722, 0, "b", 77, 0, "i", 725,0]);
 
 Item.addShapedRecipe(718, 1, 0, [
 " l ",
 " b ",
 " i "
 ],
-["l", 723, 0, "b", 726, 0, "i", 725,0]);
+["l", 723, 0, "b", 77, 0, "i", 725,0]);
 
 Item.addShapedRecipe(719, 1, 0, [
 " l ",
 " b ",
 " i "
 ],
-["l", 724, 0, "b", 726, 0, "i", 725,0]);
-
-Item.addShapedRecipe(726, 1, 0, [
-"   ",
-" s ",
-"   "
-],
-["s", 1, 0]);
+["l", 724, 0, "b", 77, 0, "i", 725,0]);
 
 Item.addShapedRecipe(729, 1, 0, [
 "igi",
@@ -452,7 +444,6 @@ Player.addItemCreativeInv(722,1,0);
 Player.addItemCreativeInv(723,1,0);
 Player.addItemCreativeInv(724,1,0);
 Player.addItemCreativeInv(725,1,0);
-Player.addItemCreativeInv(726,1,0);
 
 Player.addItemCreativeInv(729,1,0);
 Player.addItemCreativeInv(730,1,0);
@@ -471,7 +462,7 @@ Player.addItemCreativeInv(743,1,0);
 Player.addItemCreativeInv(744,1,0);
 Player.addItemCreativeInv(745,1,0);
 Player.addItemCreativeInv(746,1,0);
-*/
+
 
 
 
