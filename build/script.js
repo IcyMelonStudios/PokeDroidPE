@@ -6161,3 +6161,2867 @@ leftLeg.addBox(-1,11,-4,2,1,2);
 }
 var SudowoodoRenderer = Renderer.createHumanoidRenderer();
 addSudowoodoRenderer(SudowoodoRenderer);
+
+
+function addAerodactylRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+head.setTextureOffset(0, 0);
+head.addBox(0, 0, 0, 5, 5, 5);
+head.setTextureOffset(40, 0);
+head.addBox(0, -3, 3, 0, 3, 2);
+head.setTextureOffset(40, 0);
+head.addBox(0, -4, 4, 0, 4, 1);
+head.setTextureOffset(40, 0);
+head.addBox(5, -3, 3, 0, 3, 2);
+head.setTextureOffset(40, 0);
+head.addBox(5, -4, 4, 0, 4, 1);
+head.setTextureOffset(20, 0);
+head.addBox(0, 1, -5, 5, 4, 5);
+body.clear();
+body.setTextureOffset(40, 0);
+body.addBox(0, 1, 5, 5, 4, 3);
+body.setTextureOffset(40, 0);
+body.addBox(-1, 0, 8, 7, 7, 5);
+body.setTextureOffset(40, 0);
+body.addBox(-1, 0, 13, 7, 7, 5);
+body.setTextureOffset(40, 0);
+body.addBox(-1, 0, 18, 7, 7, 5);
+body.setTextureOffset(40, 0);
+body.addBox(-1, 0, 23, 7, 7, 5);
+body.setTextureOffset(40, 0);
+body.addBox(-1, 2, 28, 7, 5, 5);
+body.setTextureOffset(40, 0);
+body.addBox(0, 3, 33, 5, 4, 4);
+body.setTextureOffset(40, 0);
+body.addBox(-1, -3, 8, 1, 3, 3);
+body.setTextureOffset(40, 0);
+body.addBox(5, -3, 8, 1, 3, 3);
+body.setTextureOffset(40, 0);
+body.addBox(-3, 3, 18, 4, 6, 6);
+body.setTextureOffset(40, 0);
+body.addBox(-5, 3, 24, 2, 8, 2);
+body.setTextureOffset(40, 0);
+body.addBox(4, 3, 18, 4, 6, 6);
+body.setTextureOffset(40, 0);
+body.addBox(8, 3, 24, 2, 8, 2);
+body.setTextureOffset(0, 22, true);
+body.addBox(-25, 2, 13, 24, 0, 10);
+body.setTextureOffset(24, 22, true);
+body.addBox(6, 2, 13, 24, 0, 10);
+lArm.clear();
+rArm.clear();
+lLeg.clear();
+rLeg.clear();
+
+}
+
+var AerodactylRenderType = Renderer.createHumanoidRenderer();
+addAerodactylRenderType(AerodactylRenderType);
+
+function addBayleefRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+
+head.setTextureOffset(0, 0);
+head.addBox(-2, 3, -7, 6, 5, 7);
+
+head.setTextureOffset(0, 30, true);
+head.addBox(1, -4, -4, 0, 7, 14);
+
+body.clear();
+
+body.setTextureOffset(28, 14);
+body.addBox(-2, 11, 0, 7, 7, 11);
+
+body.setTextureOffset(38, 0);
+body.addBox(0, 13, 11, 3, 2, 6);
+
+body.setTextureOffset(0, 19);
+body.addBox(-1, 5, 0, 5, 8, 5);
+
+rArm.clear();
+rArm.setTextureOffset(26, 0);
+rArm.addBox(4, 16, 8, 3, 7, 3);
+
+lArm.clear();
+lArm.setTextureOffset(26, 0);
+lArm.addBox(-4, 16, 8, 3, 7, 3);
+
+rLeg.clear();
+rLeg.setTextureOffset(26, 0);
+rLeg.addBox(0, 6, 0, 3, 7, 3);
+
+lLeg.clear();
+lLeg.setTextureOffset(26, 0);
+lLeg.addBox(0, 6, 0, 3, 7, 3);
+
+}
+
+var BayleefRenderType = Renderer.createHumanoidRenderer();
+addBayleefRenderType(BayleefRenderType);
+
+function addBeedrillRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+
+body.clear();
+body.setTextureOffset(0, 0);
+body.addBox(0, -8, 0, 5, 5, 5);
+body.setTextureOffset(38, 0);
+body.addBox(0.5, -13, 2, 1, 5, 1);
+body.setTextureOffset(38, 0);
+body.addBox(3.5, -13, 2, 1, 5, 1);
+body.setTextureOffset(42, 0);
+body.addBox(1, -3, 1, 3, 3, 4);
+body.setTextureOffset(20, 0);
+body.addBox(0, 0, 1, 5, 6, 4);
+
+body.setTextureOffset(42, 0);
+body.addBox(-6, 3, 2, 6, 1, 1);
+body.setTextureOffset(42, 0);
+body.addBox(-6, 3, -3, 1, 1, 5);
+body.setTextureOffset(24, 10);
+body.addBox(-8, 1, -5, 5, 5, 2);
+body.setTextureOffset(24, 10);
+body.addBox(-7, 2, -10, 3, 3, 5);
+body.setTextureOffset(24, 10);
+body.addBox(-6, 3, -15, 1, 1, 5);
+
+body.setTextureOffset(42, 0);
+body.addBox(5, 3, 2, 6, 1, 1);
+body.setTextureOffset(42, 0);
+body.addBox(11, 3, -3, 1, 1, 5);
+body.setTextureOffset(24, 10);
+body.addBox(9, 1, -5, 5, 5, 2);
+body.setTextureOffset(24, 10);
+body.addBox(10, 2, -10, 3, 3, 5);
+body.setTextureOffset(24, 10);
+body.addBox(11, 3, -15, 1, 1, 5);
+
+body.setTextureOffset(42, 0);
+body.addBox(2, 6, 2, 1, 5, 1);
+
+body.setTextureOffset(0, 12, true);
+body.addBox(-8, -13, 5, 12, 20, 0);
+body.setTextureOffset(40, 12, true);
+body.addBox(2, -13, 5, 12, 20, 0);
+
+rArm.clear();
+
+lArm.clear();
+
+rLeg.clear();
+
+lLeg.clear();
+
+}
+
+var BeedrillRenderType = Renderer.createHumanoidRenderer();
+addBeedrillRenderType(BeedrillRenderType);
+
+function addBlazikenRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+head.setTextureOffset(0, 0);
+head.addBox(-2, -11, -2, 6, 5, 7);
+head.setTextureOffset(19, 8);
+head.addBox(-1, -11, 5, 4, 1, 1);
+head.setTextureOffset(19, 8);
+head.addBox(-1, -10, 6, 4, 1, 1);
+head.setTextureOffset(19, 8);
+head.addBox(-1, -9, 7, 4, 1, 1);
+head.setTextureOffset(19, 8);
+head.addBox(-1, -8, 8, 4, 1, 1);
+head.setTextureOffset(19, 8);
+head.addBox(-1, -7, 9, 4, 1, 1);
+head.setTextureOffset(19, 8);
+head.addBox(-1, -6, 10, 4, 1, 1);
+
+
+body.clear();
+body.setTextureOffset(0, 12);
+body.addBox(-2, -6, -1, 6, 13, 6);
+
+rArm.clear();
+rArm.setTextureOffset(41, 0);
+rArm.addBox(1, -5, 1, 2, 8, 2);
+rArm.setTextureOffset(49, 4);
+rArm.addBox(1, 3, 1, 2, 4, 2);
+
+lArm.clear();
+lArm.setTextureOffset(41, 0);
+lArm.addBox(-1, -5, 1, 2, 8, 2);
+
+lArm.setTextureOffset(49, 4);
+lArm.addBox(-1, 3, 1, 2, 4, 2);
+
+rLeg.clear();
+rLeg.setTextureOffset(44, 10);
+rLeg.addBox(-3, -5, 0, 5, 17, 5);
+
+lLeg.clear();
+lLeg.setTextureOffset(44, 10);
+lLeg.addBox(0, -5, 0, 5, 17, 5);
+
+}
+
+var BlazikenRenderType = Renderer.createHumanoidRenderer();
+addBlazikenRenderType(BlazikenRenderType);
+
+function addCharmeleonRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+head.setTextureOffset(0, 0);
+head.addBox(-2, 4, -2, 6, 6, 5);
+head.setTextureOffset(38, 17);
+head.addBox(-1, 7, -5, 4, 3, 3);
+head.setTextureOffset(38, 24);
+head.addBox(0, 3, 0, 2, 1, 6);
+
+
+body.clear();
+body.setTextureOffset(16, 16, true);
+body.addBox(-2, 10, -2, 6, 10, 5);
+body.setTextureOffset(22, 0, true);
+body.addBox(0, 18, 3, 2, 2, 4);
+body.setTextureOffset(22, 6, true);
+body.addBox(0.5, 18.5, 7, 1, 1, 4);
+body.setTextureOffset(35, 0, true);
+body.addBox(1, 12, 8, 0, 6, 4);
+
+rArm.clear();
+rArm.setTextureOffset(56, 0);
+rArm.addBox(2, 10, -1, 2, 5, 2);
+
+lArm.clear();
+lArm.setTextureOffset(56, 0);
+lArm.addBox(-2, 10, -1, 2, 5, 2);
+
+rLeg.clear();
+rLeg.setTextureOffset(0, 13);
+rLeg.addBox(-1, 7, -1, 3, 5, 3);
+
+lLeg.clear();
+lLeg.setTextureOffset(0, 22);
+lLeg.addBox(0, 7, -1, 3, 5, 3);
+
+}
+
+var CharmeleonRenderType = Renderer.createHumanoidRenderer();
+addCharmeleonRenderType(CharmeleonRenderType);
+
+function addCombuskenRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+head.setTextureOffset(0, 0);
+head.addBox(0, -4, -0.5, 7, 7, 7);
+head.setTextureOffset(0, 14);
+head.addBox(2, -0, -1.5, 3, 1, 1);
+head.setTextureOffset(29, 9, true);
+head.addBox(0, -9, 3, 7, 5, 0);
+
+body.clear();
+body.setTextureOffset(40, 10);
+body.addBox(0.5, 3, 0, 6, 14, 6);
+
+rArm.clear();
+rArm.setTextureOffset(29, 0);
+rArm.addBox(-6, 5, 1, 13, 1, 4);
+
+lArm.clear();
+lArm.setTextureOffset(29, 0);
+lArm.addBox(-1, 5, 1, 13, 1, 4);
+
+rLeg.clear();
+rLeg.setTextureOffset(0, 20);
+rLeg.addBox(-2, -1, 0, 5, 6, 6);
+rLeg.setTextureOffset(22, 24);
+rLeg.addBox(0.5, 5, 2, 2, 6, 2);
+rLeg.setTextureOffset(17, 17);
+rLeg.addBox(-1, 11, -2, 5, 1, 6);
+
+lLeg.clear();
+lLeg.setTextureOffset(0, 20);
+lLeg.addBox(3, -1, 0, 5, 6, 6);
+lLeg.setTextureOffset(22, 24);
+lLeg.addBox(4.5, 5, 2, 2, 6, 2);
+lLeg.setTextureOffset(17, 17);
+lLeg.addBox(3, 11, -2, 5, 1, 6);
+
+}
+
+var CombuskenRenderType = Renderer.createHumanoidRenderer();
+addCombuskenRenderType(CombuskenRenderType);
+
+function addCroconawRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+head.setTextureOffset(0, 0);
+head.addBox(0, 1, 0, 8, 7, 8);
+head.setTextureOffset(24, 0);
+head.addBox(1, 4, -5, 6, 2, 5);
+head.setTextureOffset(0, 15);
+head.addBox(1, 6, -5, 6, 3, 5);
+head.setTextureOffset(0, 14, true);
+head.addBox(4, -3, 0, 0, 8, 10);
+
+body.clear();
+body.setTextureOffset(32, 12);
+body.addBox(0, 8, 0, 8, 12, 8);
+
+rArm.clear();
+rArm.setTextureOffset(0, 0);
+rArm.addBox(2, 8, 1, 4, 2, 2);
+
+lArm.clear();
+lArm.setTextureOffset(0, 0);
+lArm.addBox(2, 8, 1, 4, 2, 2);
+
+rLeg.clear();
+rLeg.setTextureOffset(40, 0);
+rLeg.addBox(1, 6, 2, 2, 4, 4);
+rLeg.addBox(1, 10, 3, 2, 2, 2);
+
+lLeg.clear();
+lLeg.setTextureOffset(40, 0);
+lLeg.addBox(5, 6, 2, 2, 4, 4);
+lLeg.addBox(5, 10, 3, 2, 2, 2);
+
+}
+
+var CroconawRenderType = Renderer.createHumanoidRenderer();
+addCroconawRenderType(CroconawRenderType);
+
+function addDodrioRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+
+
+body.clear();
+body.setTextureOffset(5, 20);
+body.addBox(-5, -11, 0, 6, 6, 6);
+body.setTextureOffset(5, 20);
+body.addBox(2, -11, -1, 6, 6, 6);
+body.setTextureOffset(5, 20);
+body.addBox(9, -11, 0, 6, 6, 6);
+body.setTextureOffset(30, 25);
+body.addBox(-2.5, -8, -6, 1, 1, 6);
+body.setTextureOffset(30, 25);
+body.addBox(4.5, -8, -7, 1, 1, 6);
+body.setTextureOffset(30, 25);
+body.addBox(11.5, -8, -6, 1, 1, 6);
+body.setTextureOffset(0, 21);
+body.addBox(0, -5, 2, 1, 8, 1);
+body.setTextureOffset(0, 21);
+body.addBox(4.5, -5, 1, 1, 8, 1);
+body.setTextureOffset(0, 21);
+body.addBox(9, -5, 2, 1, 8, 1);
+body.setTextureOffset(24, 0);
+body.addBox(0, 2, -1, 10, 10, 10);
+body.setTextureOffset(44, 22);
+body.addBox(-1, 4, 9, 4, 1, 6);
+body.setTextureOffset(44, 22);
+body.addBox(3, 4, 9, 4, 1, 6);
+body.setTextureOffset(44, 22);
+body.addBox(7, 4, 9, 4, 1, 6);
+
+rArm.clear();
+
+lArm.clear();
+
+rLeg.clear();
+rLeg.setTextureOffset(0, 6);
+rLeg.addBox(4, -1, 3, 1, 12, 1);
+rLeg.setTextureOffset(0, 0);
+rLeg.addBox(3, 11, 0, 3, 1, 5);
+
+lLeg.clear();
+lLeg.setTextureOffset(0, 6);
+lLeg.addBox(5, -1, 3, 1, 12, 1);
+lLeg.setTextureOffset(0, 0);
+lLeg.addBox(4, 11, 0, 3, 1, 5);
+
+}
+
+var DodrioRenderType = Renderer.createHumanoidRenderer();
+addDodrioRenderType(DodrioRenderType);
+
+function addDunsparceRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+
+body.clear();
+body.setTextureOffset(0, 0);
+body.addBox(-2, 16, 0, 8, 8, 8);
+body.setTextureOffset(20, 14);
+body.addBox(-3, 18, 8, 10, 6, 12);
+body.setTextureOffset(52, 0);
+body.addBox(-6.5, 19, 9, 4, 0, 4);
+body.setTextureOffset(52, 0);
+body.addBox(6.5, 19, 9, 4, 0, 4);
+body.setTextureOffset(0, 16);
+body.addBox(0.5, 19.5, 20, 3, 3, 4);
+body.setTextureOffset(0, 23);
+body.addBox(0, 19, 24, 4, 4, 5);
+
+rArm.clear();
+
+lArm.clear();
+
+rLeg.clear();
+
+lLeg.clear();
+
+}
+
+var DunsparceRenderType = Renderer.createHumanoidRenderer();
+addDunsparceRenderType(DunsparceRenderType);
+
+function addEeveeRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+
+head.setTextureOffset(28, 6);
+head.addBox(-2, 10, -2, 5, 5, 4);
+head.setTextureOffset(28, 15);
+head.addBox(-1.5, 13, -3, 4, 2, 2);
+head.setTextureOffset(28, 0);
+head.addBox(-3, 6, -1, 2, 4, 1);
+head.setTextureOffset(28, 0);
+head.addBox(2, 6, -1, 2, 4, 1);
+
+
+body.clear();
+1
+body.setTextureOffset(0, 1);
+body.addBox(-3, 15, -1, 7, 4, 4);
+2
+body.setTextureOffset(0, 20);
+body.addBox(-2.5, 15, 3, 6, 4, 6);
+
+body.setTextureOffset(28, 22);
+body.addBox(0, 13, 7, 1, 4, 6);
+
+rArm.clear();
+rArm.setTextureOffset(48, 0);
+rArm.addBox(3.5, 17, 0, 2, 5, 2);
+
+lArm.clear();
+lArm.setTextureOffset(56, 0);
+lArm.addBox(-4.5, 17, 0, 2, 5, 2);
+
+rLeg.clear();
+rLeg.setTextureOffset(48, 0);
+rLeg.addBox(-0.5, 7, 6, 2, 5, 2);
+
+lLeg.clear();
+lLeg.setTextureOffset(56, 0);
+lLeg.addBox(-0.5, 7, 6, 2, 5, 2);
+
+}
+
+var EeveeRenderType = Renderer.createHumanoidRenderer();
+addEeveeRenderType(EeveeRenderType);
+
+function addEspeonRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+
+head.setTextureOffset(28, 6);
+head.addBox(-2, 10, -2, 5, 5, 4);
+1
+head.setTextureOffset(0, 0, true);
+head.addBox(-7, 9, -1, 5, 3, 0);
+1
+head.setTextureOffset(10, 0, true);
+head.addBox(3, 9, -1, 5, 3, 0);
+
+2
+head.setTextureOffset(0, 6, true);
+head.addBox(-6, 12, -1, 4, 2, 0);
+2
+head.setTextureOffset(10, 6, true);
+head.addBox(3, 12, -1, 4, 2, 0);
+
+body.clear();
+
+body.setTextureOffset(0, 18);
+body.addBox(-2.5, 15, 0, 6, 4, 8);
+1
+body.setTextureOffset(8, 21);
+body.addBox(0, 16, 8, 1, 1, 6);
+2
+body.setTextureOffset(8, 18);
+body.addBox(0, 11, 13, 1, 5, 1);
+
+rArm.clear();
+rArm.setTextureOffset(48, 0);
+rArm.addBox(3.5, 17, 0, 2, 5, 2);
+
+lArm.clear();
+lArm.setTextureOffset(56, 0);
+lArm.addBox(-4.5, 17, 0, 2, 5, 2);
+
+rLeg.clear();
+rLeg.setTextureOffset(48, 0);
+rLeg.addBox(-0.5, 7, 6, 2, 5, 2);
+
+lLeg.clear();
+lLeg.setTextureOffset(56, 0);
+lLeg.addBox(-0.5, 7, 6, 2, 5, 2);
+
+}
+
+var EspeonRenderType = Renderer.createHumanoidRenderer();
+addEspeonRenderType(EspeonRenderType);
+
+function addFeraligatrRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+head.setTextureOffset(0, 0, true);
+head.addBox(1, -10, -3, 8, 8, 9);
+head.setTextureOffset(40, 10, true);
+head.addBox(2, -7, -9, 6, 2, 6);
+head.setTextureOffset(38, 0, true);
+head.addBox(2, -5, -10, 6, 3, 7);
+head.setTextureOffset(48, 18, true);
+head.addBox(5, -16, -1, 0, 6, 8);
+head.setTextureOffset(48, 18, true);
+head.addBox(6, -16, -1, 0, 6, 8);
+
+body.clear();
+body.setTextureOffset(0, 17);
+body.addBox(0, -2, -3, 5, 6, 9);
+body.setTextureOffset(0, 17);
+body.addBox(0, 4, -3, 5, 6, 9);
+body.setTextureOffset(0, 17);
+body.addBox(0, 10, -3, 5, 6, 9);
+body.setTextureOffset(0, 17);
+body.addBox(5, -2, -3, 5, 6, 9);
+body.setTextureOffset(0, 17);
+body.addBox(5, 4, -3, 5, 6, 9);
+body.setTextureOffset(0, 17);
+body.addBox(5, 10, -3, 5, 6, 9);
+body.setTextureOffset(0, 17);
+body.addBox(2, 10, 6, 6, 5, 4);
+body.setTextureOffset(0, 17);
+body.addBox(2, 10, 10, 6, 5, 4);
+body.setTextureOffset(0, 17);
+body.addBox(3, 10, 10, 4, 5, 6);
+body.setTextureOffset(48, 18, true);
+body.addBox(5, 5, 8, 0, 5, 6);
+
+rArm.clear();
+rArm.setTextureOffset(0, 17);
+rArm.addBox(-1, 0, 0, 7, 4, 4);
+rArm.setTextureOffset(0, 17);
+rArm.addBox(-1, 0, -7, 4, 4, 7);
+
+lArm.clear();
+lArm.setTextureOffset(0, 17);
+lArm.addBox(4, 0, 0, 7, 4, 4);
+lArm.setTextureOffset(0, 17);
+lArm.addBox(7, 0, -7, 4, 4, 7);
+
+rLeg.clear();
+rLeg.setTextureOffset(0, 17);
+rLeg.addBox(-2, 2, 0, 4, 6, 6);
+rLeg.setTextureOffset(0, 17);
+rLeg.addBox(-2, 8, -2, 4, 2, 6);
+
+lLeg.clear();
+lLeg.setTextureOffset(0, 17);
+lLeg.addBox(8, 2, 0, 4, 6, 6);
+lLeg.setTextureOffset(0, 17);
+lLeg.addBox(8, 8, -2, 4, 2, 6);
+
+}
+
+var FeraligatrRenderType = Renderer.createHumanoidRenderer();
+addFeraligatrRenderType(FeraligatrRenderType);
+
+function addFlareonRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+
+head.setTextureOffset(28, 6);
+head.addBox(-2, 10, -2, 5, 5, 4);
+
+head.setTextureOffset(28, 15);
+head.addBox(-1.5, 13, -3, 4, 2, 2);
+
+head.setTextureOffset(28, 0);
+head.addBox(-3, 6, -1, 2, 4, 1);
+
+head.setTextureOffset(28, 0);
+head.addBox(2, 6, -1, 2, 4, 1);
+
+
+body.clear();
+1
+body.setTextureOffset(0, 1, true);
+body.addBox(-3, 15, -1, 7, 4, 4);
+2
+body.setTextureOffset(0, 22, true);
+body.addBox(-2.5, 15, 3, 6, 4, 6);
+
+body.setTextureOffset(28, 22, true);
+body.addBox(0, 13, 7, 1, 4, 6);
+
+rArm.clear();
+rArm.setTextureOffset(48, 0);
+rArm.addBox(3.5, 17, 0, 2, 5, 2);
+
+lArm.clear();
+lArm.setTextureOffset(56, 0);
+lArm.addBox(-4.5, 17, 0, 2, 5, 2);
+
+rLeg.clear();
+rLeg.setTextureOffset(48, 0);
+rLeg.addBox(-0.5, 7, 6, 2, 5, 2);
+
+lLeg.clear();
+lLeg.setTextureOffset(56, 0);
+lLeg.addBox(-0.5, 7, 6, 2, 5, 2);
+
+}
+
+var FlareonRenderType = Renderer.createHumanoidRenderer();
+addFlareonRenderType(FlareonRenderType);
+
+
+function addGengarRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+
+body.clear();
+body.setTextureOffset(0, 0);
+body.addBox(0, 0, 0, 7, 8, 6, 2);
+body.setTextureOffset(8, 14);
+body.addBox(8, 3, 2, 3.5, 2, 2, 0.8);
+body.setTextureOffset(8, 18);
+body.addBox(-4, 3, 2, 3.5, 2, 2, 0.8);
+body.setTextureOffset(0, 0);
+body.addBox(-1, -6, 2, 1, 4, 2, 0.5);
+body.setTextureOffset(0, 0);
+body.addBox(7, -6, 2, 1, 4, 2, 0.5);
+body.setTextureOffset(0, 14);
+body.addBox(-1.5, 9, 2, 2, 4, 2, 1);
+body.setTextureOffset(0, 14);
+body.addBox(6.5, 9, 2, 2, 4, 2, 1);
+
+rArm.clear();
+
+lArm.clear();
+
+rLeg.clear();
+
+lLeg.clear();
+
+}
+
+var GengarRenderType = Renderer.createHumanoidRenderer();
+addGengarRenderType(GengarRenderType);
+
+function addGolbatRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+
+body.clear();
+body.setTextureOffset(32, 0);
+body.addBox(0, -2, 0, 10, 12, 6);
+
+body.setTextureOffset(0, 0);
+body.addBox(0, -5, 1, 3, 3, 1);
+body.setTextureOffset(0, 0);
+body.addBox(7, -5, 1, 3, 3, 1);
+
+body.setTextureOffset(48, 6);
+body.addBox(0, 10, 2, 1, 4, 1);
+body.setTextureOffset(0, 0);
+body.addBox(0, 14, -2, 1, 1, 10);
+
+body.setTextureOffset(48, 6);
+body.addBox(9, 10, 2, 1, 4, 1);
+body.setTextureOffset(0, 0);
+body.addBox(9, 14, -2, 1, 1, 10);
+
+body.setTextureOffset(0, 25, true);
+body.addBox(-16, 1, 2, 16, 7, 0);
+
+body.setTextureOffset(0, 18, true);
+body.addBox(10, 1, 2, 16, 7, 0);
+
+rArm.clear();
+
+lArm.clear();
+
+rLeg.clear();
+
+lLeg.clear();
+
+}
+
+var GolbatRenderType = Renderer.createHumanoidRenderer();
+addGolbatRenderType(GolbatRenderType);
+
+function addGolemRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+
+body.clear();
+body.setTextureOffset(0, 5);
+body.addBox(2, 12, -5.5, 3, 1, 3);
+body.setTextureOffset(10, 5);
+body.addBox(2, 13, -6, 3, 2, 3);
+body.setTextureOffset(0, 10);
+body.addBox(-2, 7, 0, 11, 11, 11, 3);
+body.setTextureOffset(0, 0);
+body.addBox(-8, 13, 3, 2, 2, 4, 1);
+body.setTextureOffset(44, 18);
+body.addBox(13, 13, 3, 2, 2, 4, 1);
+
+rArm.clear();
+
+lArm.clear();
+
+rLeg.clear();
+rLeg.setTextureOffset(44, 24);
+rLeg.addBox(1, 7, 4, 3, 5, 3);
+
+lLeg.clear();
+lLeg.setTextureOffset(44, 24);
+lLeg.addBox(3, 7, 4, 3, 5, 3);
+
+}
+
+var GolemRenderType = Renderer.createHumanoidRenderer();
+addGolemRenderType(GolemRenderType);
+
+function addGravelerRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+
+
+body.clear();
+body.setTextureOffset(4, 2);
+body.addBox(-2, 5, 0, 15, 15, 15);
+body.setTextureOffset(19, 2);
+body.addBox(-10, 8, 4, 10, 3, 3);
+body.setTextureOffset(19, 2);
+body.addBox(-10, 14, 4, 10, 3, 3);
+body.setTextureOffset(19, 2);
+body.addBox(13, 8, 4, 10, 3, 3);
+body.setTextureOffset(19, 2);
+body.addBox(13, 14, 4, 10, 3, 3);
+
+rArm.clear();
+
+lArm.clear();
+
+rLeg.clear();
+rLeg.setTextureOffset(19, 2);
+rLeg.addBox(2, 8, 6, 3, 4, 3);
+
+lLeg.clear();
+lLeg.setTextureOffset(19, 2);
+lLeg.addBox(6, 8, 6, 3, 4, 3);
+
+}
+
+var GravelerRenderType = Renderer.createHumanoidRenderer();
+addGravelerRenderType(GravelerRenderType);
+
+function addGrovyleRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+head.setTextureOffset(0, 0);
+head.addBox(-2, 0, -2, 5, 4, 8);
+head.setTextureOffset(15, 0, true);
+head.addBox(0, -0.1, 2, 1, 0, 11);
+
+body.clear();
+body.setTextureOffset(48, 23);
+body.addBox(-1.5, 4, 1, 4, 3, 4);
+body.setTextureOffset(23, 15);
+body.addBox(-2.5, 7, 0, 6, 11, 6);
+
+rArm.clear();
+rArm.setTextureOffset(34, 0);
+rArm.addBox(-2, 6, 2, 6, 2, 2);
+rArm.setTextureOffset(34, 0);
+rArm.addBox(-2, 6.5, -4, 1, 1, 6);
+rArm.setTextureOffset(51, 9, true);
+rArm.addBox(-6, 7, -5, 5, 0, 5);
+
+lArm.clear();
+lArm.setTextureOffset(34, 0);
+lArm.addBox(-2.5, 6, 2, 6, 2, 2);
+lArm.setTextureOffset(34, 0);
+lArm.addBox(2.5, 6.5, -4, 1, 1, 6);
+lArm.setTextureOffset(51, 9, true);
+lArm.addBox(2.5, 7, -5, 5, 0, 5);
+
+rLeg.clear();
+rLeg.setTextureOffset(34, 0);
+rLeg.addBox(0, 6, 3, 1, 6, 1);
+rLeg.setTextureOffset(34, 0);
+rLeg.addBox(0, 11, 0, 1, 1, 6);
+
+lLeg.clear();
+lLeg.setTextureOffset(34, 0);
+lLeg.addBox(0, 6, 3, 1, 6, 1);
+lLeg.setTextureOffset(34, 0);
+lLeg.addBox(0, 11, 0, 1, 1, 6);
+
+}
+
+var GrovyleRenderType = Renderer.createHumanoidRenderer();
+addGrovyleRenderType(GrovyleRenderType);
+
+function addHaunterRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+
+body.clear();
+body.setTextureOffset(0, 0);
+body.addBox(0, -2, 0, 8, 3, 7);
+body.setTextureOffset(30, 12);
+body.addBox(-1, -4, 0, 1, 2, 10);
+body.setTextureOffset(30, 12);
+body.addBox(8, -4, 0, 1, 2, 10);
+body.setTextureOffset(0, 10);
+body.addBox(0, 2, 0, 8, 3, 7);
+body.setTextureOffset(0, 27);
+body.addBox(-6, 5, 0, 4, 1, 4);
+body.setTextureOffset(0, 27);
+body.addBox(10, 5, 0, 4, 1, 4);
+
+body.setTextureOffset(30, 12);
+body.addBox(0, -2, 7, 8, 7, 3);
+
+body.setTextureOffset(30, 12);
+body.addBox(0, 5, 5, 8, 3, 4);
+body.setTextureOffset(30, 12);
+body.addBox(0, 7, 7, 8, 3, 4);
+body.setTextureOffset(30, 12);
+body.addBox(0, 8, 9, 8, 3, 4);
+body.setTextureOffset(30, 12);
+body.addBox(1, 8, 13, 6, 3, 2);
+body.setTextureOffset(30, 12);
+body.addBox(2, 7, 15, 4, 3, 2);
+
+rArm.clear();
+
+lArm.clear();
+
+rLeg.clear();
+
+lLeg.clear();
+
+}
+
+var HaunterRenderType = Renderer.createHumanoidRenderer();
+addHaunterRenderType(HaunterRenderType);
+
+
+function addJolteonRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+
+head.setTextureOffset(28, 6);
+head.addBox(-2, 10, -2, 5, 5, 4);
+
+head.setTextureOffset(28, 15);
+head.addBox(-1.5, 13, -3, 4, 2, 2);
+
+head.setTextureOffset(28, 0);
+head.addBox(-2, 5, -1, 2, 5, 1);
+
+head.setTextureOffset(28, 0);
+head.addBox(1, 5, -1, 2, 5, 1);
+
+body.clear();
+
+body.setTextureOffset(0, 18);
+body.addBox(-2.5, 15, 0, 6, 4, 8);
+body.setTextureOffset(40, 15, true);
+body.addBox(-3, 14, -1, 7, 4, 6);
+
+body.setTextureOffset(28, 24, true);
+body.addBox(-1, 13, 7, 3, 4, 4);
+
+rArm.clear();
+rArm.setTextureOffset(48, 0);
+rArm.addBox(3.5, 17, 0, 2, 5, 2);
+
+lArm.clear();
+lArm.setTextureOffset(56, 0);
+lArm.addBox(-4.5, 17, 0, 2, 5, 2);
+
+rLeg.clear();
+rLeg.setTextureOffset(48, 0);
+rLeg.addBox(-0.5, 7, 6, 2, 5, 2);
+
+lLeg.clear();
+lLeg.setTextureOffset(56, 0);
+lLeg.addBox(-0.5, 7, 6, 2, 5, 2);
+
+}
+
+var JolteonRenderType = Renderer.createHumanoidRenderer();
+addJolteonRenderType(JolteonRenderType);
+
+function addKakunaRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+
+body.clear();
+body.setTextureOffset(0, 0);
+body.addBox(-2, 6, 0, 7, 10, 7);
+body.setTextureOffset(44, 20);
+body.addBox(-1, 16, 1, 5, 7, 5);
+
+rArm.clear();
+
+lArm.clear();
+
+rLeg.clear();
+
+lLeg.clear();
+
+}
+
+var KakunaRenderType = Renderer.createHumanoidRenderer();
+addKakunaRenderType(KakunaRenderType);
+
+function addKoffingRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+
+body.clear();
+body.setTextureOffset(0, 0);
+body.addBox(0, -2, 0, 16, 16, 16, -3);
+
+rArm.clear();
+
+lArm.clear();
+
+rLeg.clear();
+
+lLeg.clear();
+
+}
+
+var KoffingRenderType = Renderer.createHumanoidRenderer();
+addKoffingRenderType(KoffingRenderType);
+
+
+function addMetapodRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+
+body.clear();
+body.setTextureOffset(0, 0);
+body.addBox(-2, 6, 0, 7, 10, 7);
+body.setTextureOffset(44, 20);
+body.addBox(-1, 16, 1, 5, 7, 5);
+
+rArm.clear();
+
+lArm.clear();
+
+rLeg.clear();
+
+lLeg.clear();
+
+}
+
+var MetapodRenderType = Renderer.createHumanoidRenderer();
+addMetapodRenderType(MetapodRenderType);
+
+
+
+function addMarshtompRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+head.setTextureOffset(0, 0);
+head.addBox(-2, 4, -2, 7, 7, 7);
+head.setTextureOffset(23, 0);
+head.addBox(-5, 9, -1, 3, 1, 1);
+head.setTextureOffset(23, 0);
+head.addBox(5, 9, -1, 3, 1, 1);
+head.setTextureOffset(50, 0, true);
+head.addBox(1.5, -1, 0, 0, 10, 7);
+
+body.clear();
+body.setTextureOffset(0, 14);
+body.addBox(-1.5, 11, -1.5, 6, 8, 6);
+
+rArm.clear();
+rArm.setTextureOffset(27, 27);
+rArm.addBox(-3, 10, 0, 9, 1, 4);
+
+lArm.clear();
+lArm.setTextureOffset(27, 27);
+lArm.addBox(-3, 10, 0, 9, 1, 4);
+
+rLeg.clear();
+rLeg.setTextureOffset(30, 15);
+rLeg.addBox(-1, 6, 0, 3, 6, 3);
+
+lLeg.clear();
+lLeg.setTextureOffset(30, 15);
+lLeg.addBox(1, 6, 0, 3, 6, 3);
+
+}
+
+var MarshtompRenderType = Renderer.createHumanoidRenderer();
+addMarshtompRenderType(MarshtompRenderType);
+
+function addMankeyRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+
+body.clear();
+body.setTextureOffset(0, 0);
+body.addBox(0, 10, 0, 9, 9, 9);
+body.setTextureOffset(0, 0);
+body.addBox(0, 7, 4, 3, 3, 1);
+body.setTextureOffset(0, 0);
+body.addBox(6, 7, 4, 3, 3, 1);
+body.setTextureOffset(0, 5);
+body.addBox(3, 14, -0.5, 3, 3, 1);
+
+rArm.clear();
+rArm.setTextureOffset(44, 0);
+rArm.addBox(3.5, 10, 3, 2, 6, 2);
+rArm.setTextureOffset(52, 0);
+rArm.addBox(4, 16, 3.5, 1, 4, 1);
+rArm.setTextureOffset(56, 0);
+rArm.addBox(3.5, 20, 3, 2, 3, 2);
+
+lArm.clear();
+lArm.setTextureOffset(44, 0);
+lArm.addBox(3.5, 10, 3, 2, 6, 2);
+lArm.setTextureOffset(52, 0);
+lArm.addBox(4, 16, 3.5, 1, 4, 1);
+lArm.setTextureOffset(56, 0);
+lArm.addBox(3.5, 20, 3, 2, 3, 2);
+
+rLeg.clear();
+rLeg.setTextureOffset(56, 18);
+rLeg.addBox(2, 7, 3, 2, 4, 2);
+rLeg.setTextureOffset(48, 25);
+rLeg.addBox(1.5, 11, 0, 3, 2, 5);
+
+lLeg.clear();
+lLeg.setTextureOffset(56, 18);
+lLeg.addBox(4, 7, 3, 2, 4, 2);
+lLeg.setTextureOffset(48, 25);
+lLeg.addBox(3.5, 11, 0, 3, 2, 5);
+
+}
+
+var MankeyRenderType = Renderer.createHumanoidRenderer();
+addMankeyRenderType(MankeyRenderType);
+
+
+function addMudkipRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+head.setTextureOffset(0, 0);
+head.addBox(-2, 10, -8, 6, 6, 6);
+head.setTextureOffset(0, 13);
+head.addBox(0.5, 5, -7, 1, 5, 4);
+
+head.setTextureOffset(0, 23);
+head.addBox(-3, 11.5, -6.5, 2, 3, 3);
+head.setTextureOffset(0, 30);
+head.addBox(-5, 12.5, -6.5, 2, 1, 1);
+head.setTextureOffset(0, 30);
+head.addBox(-5, 12.5, -4.5, 2, 1, 1);
+
+head.setTextureOffset(0, 23);
+head.addBox(3, 11.5, -6.5, 2, 3, 3);
+head.setTextureOffset(0, 30);
+head.addBox(5, 12.5, -6.5, 2, 1, 1);
+head.setTextureOffset(0, 30);
+head.addBox(5, 12.5, -4.5, 2, 1, 1);
+
+body.clear();
+body.setTextureOffset(25, 0);
+body.addBox(-1.5, 15, -4, 5, 5, 7);
+body.setTextureOffset(54, 24);
+body.addBox(0, 13, 2, 2, 5, 3);
+
+rArm.clear();
+rArm.setTextureOffset(18, 26);
+rArm.addBox(4, 17, 1, 2, 4, 2);
+
+lArm.clear();
+lArm.setTextureOffset(18, 26);
+lArm.addBox(-4, 17, 1, 2, 4, 2);
+
+rLeg.clear();
+rLeg.setTextureOffset(18, 26);
+rLeg.addBox(0, 7, -4, 2, 4, 2);
+
+lLeg.clear();
+lLeg.setTextureOffset(18, 26);
+lLeg.addBox(0, 7, -4, 2, 4, 2);
+
+}
+
+var MudkipRenderType = Renderer.createHumanoidRenderer();
+addMudkipRenderType(MudkipRenderType);
+
+function addMeganiumRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+//head
+head.setTextureOffset(0, 0);
+head.addBox(-2, 3, -7, 6, 5, 7);
+//yellow part left
+head.setTextureOffset(49, 14);
+head.addBox(3, 2, -7, 1, 1, 6);
+//yellow part right
+head.setTextureOffset(49, 14);
+head.addBox(-2, 2, -7, 1, 1, 6);
+
+body.clear();
+//body
+body.setTextureOffset(24, 14);
+body.addBox(-2, 11, 0, 7, 7, 11);
+//tail
+body.setTextureOffset(38, 0);
+body.addBox(0, 13, 11, 3, 2, 6);
+//neck
+body.setTextureOffset(34, 21);
+body.addBox(-1, 5, 0, 5, 8, 5);
+//flower on the neck
+body.setTextureOffset(-12, 20, true);
+body.addBox(-5, 10, -4, 12, 0, 12);
+
+rArm.clear();
+rArm.setTextureOffset(26, 0);
+rArm.addBox(4, 16, 8, 3, 7, 3);
+
+lArm.clear();
+lArm.setTextureOffset(26, 0);
+lArm.addBox(-4, 16, 8, 3, 7, 3);
+
+rLeg.clear();
+rLeg.setTextureOffset(26, 0);
+rLeg.addBox(0, 6, 0, 3, 7, 3);
+
+lLeg.clear();
+lLeg.setTextureOffset(26, 0);
+lLeg.addBox(0, 6, 0, 3, 7, 3);
+
+}
+
+var MeganiumRenderType = Renderer.createHumanoidRenderer();
+addMeganiumRenderType(MeganiumRenderType);
+
+
+
+function addWailmerRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+
+body.clear();
+body.setTextureOffset(0, 0);
+body.addBox(0, 20, 0, 10, 10, 10);
+body.setTextureOffset(0, 20);
+body.addBox(10, 24, 3, 4, 1, 5);
+body.setTextureOffset(0, 20);
+body.addBox(-4, 24, 3, 4, 1, 5);
+
+rArm.clear();
+
+lArm.clear();
+
+rLeg.clear();
+
+lLeg.clear();
+
+}
+
+var WailmerRenderType = Renderer.createHumanoidRenderer();
+addWailmerRenderType(WailmerRenderType);
+
+function addWailordRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+
+body.clear();
+body.setTextureOffset(0, 0, true);
+body.addBox(0, 16, 0, 7, 3, 24, 16);
+body.setTextureOffset(0, 0, true);
+body.addBox(-25, 20, 9, 5, 1, 3, 4);
+body.setTextureOffset(0, 0, true);
+body.addBox(-25, 20, 12, 5, 1, 3, 4);
+body.setTextureOffset(0, 0, true);
+body.addBox(27, 20, 9, 5, 1, 3, 4);
+body.setTextureOffset(0, 0, true);
+body.addBox(27, 20, 12, 5, 1, 3, 4);
+
+rArm.clear();
+
+lArm.clear();
+
+rLeg.clear();
+
+lLeg.clear();
+
+}
+
+var WailordRenderType = Renderer.createHumanoidRenderer();
+addWailordRenderType(WailordRenderType);
+
+
+
+function addWeedleRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+
+body.clear();
+body.setTextureOffset(0, 0);
+body.addBox(-2, 16, 0, 5, 5, 5);
+body.setTextureOffset(46, 0);
+body.addBox(-2, 18, 5, 5, 4, 4);
+body.setTextureOffset(0, 26);
+body.addBox(-1, 19, 9, 3, 3, 3);
+body.setTextureOffset(56, 28);
+body.addBox(-0.5, 18, 12, 2, 2, 2);
+
+rArm.clear();
+
+lArm.clear();
+
+rLeg.clear();
+
+lLeg.clear();
+
+}
+
+var WeedleRenderType = Renderer.createHumanoidRenderer();
+addWeedleRenderType(WeedleRenderType);
+
+function addWeezingRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+
+body.clear();
+body.setTextureOffset(0, 0);
+body.addBox(0, -2, 0, 10, 10, 10);
+body.setTextureOffset(36, 18);
+body.addBox(10, -2, 8, 7, 7, 7);
+body.setTextureOffset(0, 24);
+body.addBox(10, 4, 4, 4, 4, 4);
+
+rArm.clear();
+
+lArm.clear();
+
+rLeg.clear();
+
+lLeg.clear();
+
+}
+
+var WeezingRenderType = Renderer.createHumanoidRenderer();
+addWeezingRenderType(WeezingRenderType);
+
+function addWobbuffetRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+head.setTextureOffset(0, 0);
+head.addBox(0, -2, -1, 8, 8, 6);
+
+body.clear();
+body.setTextureOffset(40, 16);
+body.addBox(0, 6, 0, 8, 12, 4);
+
+rArm.clear();
+rArm.setTextureOffset(0, 25);
+rArm.addBox(4, 16, 4, 4, 3, 4);
+
+lArm.clear();
+lArm.setTextureOffset(0, 25);
+lArm.addBox(0, 16, 4, 4, 3, 4);
+
+rLeg.clear();
+rLeg.setTextureOffset(0, 25);
+rLeg.addBox(1, 6, -4, 4, 3, 4);
+
+lLeg.clear();
+lLeg.setTextureOffset(0, 25);
+lLeg.addBox(3, 6, -4, 4, 3, 4);
+
+}
+
+var WobbuffetRenderType = Renderer.createHumanoidRenderer();
+addWobbuffetRenderType(WobbuffetRenderType);
+
+
+
+function addCelebiRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+
+body.clear();
+body.setTextureOffset(0, 0);
+body.addBox(-2, 0, 0, 8, 8, 8);
+
+body.setTextureOffset(0, 16);
+body.addBox(-0.5, 8, 1.5, 5, 7, 5);
+
+body.setTextureOffset(44, 22);
+body.addBox(-1, -1, 1, 1, 1, 9);
+
+body.setTextureOffset(44, 22);
+body.addBox(4, -1, 1, 1, 1, 9);
+
+rArm.clear();
+rArm.setTextureOffset(0, 28);
+rArm.addBox(-2, 8, 2.5, 8, 1, 3);
+
+lArm.clear();
+lArm.setTextureOffset(0, 28);
+lArm.addBox(-2, 8, 2.5, 8, 1, 3);
+
+rLeg.clear();
+rLeg.setTextureOffset(28, 22);
+rLeg.addBox(2, 2, 4, 1, 4, 1);
+
+lLeg.clear();
+lLeg.setTextureOffset(28, 22);
+lLeg.addBox(1, 2, 4, 1, 4, 1);
+
+}
+
+var CelebiRenderType = Renderer.createHumanoidRenderer();
+addCelebiRenderType(CelebiRenderType);
+
+function addEnteiRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+
+
+body.clear();
+body.setTextureOffset(0, 0, true);
+body.addBox(-2, 1, -4, 5, 5, 5, 2);
+body.setTextureOffset(20, 0, true);
+body.addBox(-2.5, -4.5, -5.5, 6, 4, 0);
+body.setTextureOffset(11, 13, true);
+body.addBox(-7.5, 1.5, -5.5, 4, 5, 0);
+body.setTextureOffset(0, 13, true);
+body.addBox(4.5, 1.5, -5.5, 4, 5, 0);
+body.setTextureOffset(41, 16, true);
+body.addBox(-2.5, 10, -3, 6, 6, 4, 2);
+body.setTextureOffset(32, 0, true);
+body.addBox(-2.5, 11, 5, 6, 5, 10, 2);
+body.setTextureOffset(12, 21, true);
+body.addBox(-2, 7, 5, 5, 3, 5, 2);
+body.setTextureOffset(12, 21, true);
+body.addBox(-2, 7, 8, 5, 3, 5, 2);
+body.setTextureOffset(12, 21, true);
+body.addBox(-1.5, 7, 13, 4, 3, 6, 2);
+
+rArm.clear();
+rArm.setTextureOffset(0, 22);
+rArm.addBox(1, 15.5, -2, 3, 7, 3);
+
+lArm.clear();
+lArm.setTextureOffset(0, 22);
+lArm.addBox(-3, 15.5, -2, 3, 7, 3);
+
+rLeg.clear();
+rLeg.setTextureOffset(0, 22);
+rLeg.addBox(-3, 5.5, 11, 3, 7, 3);
+
+lLeg.clear();
+lLeg.setTextureOffset(0, 22);
+lLeg.addBox(1, 5.5, 11, 3, 7, 3);
+
+}
+
+var EnteiRenderType = Renderer.createHumanoidRenderer();
+addEnteiRenderType(EnteiRenderType);
+
+function addMewtwoRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+head.setTextureOffset(0, 0);
+head.addBox(-2, -4, -2, 6, 6, 5);
+head.setTextureOffset(50, 0);
+head.addBox(-2, -6, 0, 2, 2, 2);
+head.setTextureOffset(50, 0);
+head.addBox(2, -6, 0, 2, 2, 2);
+
+body.clear();
+body.setTextureOffset(0, 11);
+body.addBox(0.5, 0, 1, 1, 5, 1);
+body.setTextureOffset(0, 20);
+body.addBox(-1.5, 3, 1, 5, 9, 3);
+body.setTextureOffset(22, 0);
+body.addBox(-0.5, 7, -0.5, 3, 5, 3);
+body.setTextureOffset(22, 9);
+body.addBox(-0.5, 7.5, 2, 3, 4, 5);
+body.setTextureOffset(34, 0);
+body.addBox(-0.5, 8, 7, 3, 3, 5);
+body.setTextureOffset(38, 9);
+body.addBox(0, 8.5, 12, 2, 2, 5);
+
+rArm.clear();
+rArm.setTextureOffset(60, 0);
+rArm.addBox(2.5, 2, 1, 1, 8, 1);
+rArm.setTextureOffset(56, 9);
+rArm.addBox(1, 8, 0, 2, 2, 2);
+
+lArm.clear();
+lArm.setTextureOffset(60, 0);
+lArm.addBox(-1.5, 2, 1, 1, 8, 1);
+lArm.setTextureOffset(56, 9);
+lArm.addBox(-3, 8, 0, 2, 2, 2);
+
+rLeg.clear();
+rLeg.setTextureOffset(22, 23);
+rLeg.addBox(-1, 0, -0.5, 3, 5, 4);
+rLeg.setTextureOffset(48, 23);
+rLeg.addBox(-0.5, 5, 0.5, 2, 7, 2);
+
+lLeg.clear();
+lLeg.setTextureOffset(22, 23);
+lLeg.addBox(0, 0, -0.5, 3, 5, 4);
+lLeg.setTextureOffset(48, 23);
+lLeg.addBox(0.5, 5, 0.5, 2, 7, 2);
+
+}
+
+var MewtwoRenderType = Renderer.createHumanoidRenderer();
+addMewtwoRenderType(MewtwoRenderType);
+
+function addNidoranFRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+head.setTextureOffset(0, 0);
+head.addBox(0, 14, 0, 6, 6, 5);
+head.setTextureOffset(22, 0);
+head.addBox(1.5, 16, -2, 3, 3, 2);
+head.setTextureOffset(32, 0);
+head.addBox(0, 10, 1, 1, 4, 4);
+head.setTextureOffset(32, 0);
+head.addBox(5, 10, 1, 1, 4, 4);
+
+body.clear();
+body.setTextureOffset(32, 16);
+body.addBox(0, 16, 5, 6, 6, 10);
+
+rArm.clear();
+rArm.setTextureOffset(0, 26);
+rArm.addBox(4, 17, 13, 2, 4, 2);
+
+lArm.clear();
+lArm.setTextureOffset(0, 26);
+lArm.addBox(0, 17, 13, 2, 4, 2);
+
+rLeg.clear();
+rLeg.setTextureOffset(0, 26);
+rLeg.addBox(0, 7, 5, 2, 4, 2);
+
+lLeg.clear();
+lLeg.setTextureOffset(0, 26);
+lLeg.addBox(4, 7, 5, 2, 4, 2);
+
+}
+
+var NidoranFRenderType = Renderer.createHumanoidRenderer();
+addNidoranFRenderType(NidoranFRenderType);
+
+function addNidoranMRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+head.setTextureOffset(0, 0);
+head.addBox(0, 14, 0, 6, 6, 5);
+head.setTextureOffset(22, 0);
+head.addBox(1.5, 16, -2, 3, 3, 2);
+head.setTextureOffset(32, 0);
+head.addBox(0, 10, 1, 1, 4, 4);
+head.setTextureOffset(32, 0);
+head.addBox(5, 10, 1, 1, 4, 4);
+
+body.clear();
+body.setTextureOffset(32, 20);
+body.addBox(0, 16, 5, 6, 6, 10);
+
+rArm.clear();
+rArm.setTextureOffset(0, 26);
+rArm.addBox(6, 17, 9, 2, 4, 2);
+
+lArm.clear();
+lArm.setTextureOffset(0, 26);
+lArm.addBox(-2, 17, 9, 2, 4, 2);
+
+rLeg.clear();
+rLeg.setTextureOffset(0, 26);
+rLeg.addBox(2, 7, 4, 2, 4, 2);
+
+lLeg.clear();
+lLeg.setTextureOffset(0, 26);
+lLeg.addBox(2, 7, 4, 2, 4, 2);
+
+}
+
+var NidoranMRenderType = Renderer.createHumanoidRenderer();
+addNidoranMRenderType(NidoranMRenderType);
+
+function addNidorinaRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+head.setTextureOffset(0, 0);
+head.addBox(0, 14, 0, 8, 8, 7);
+head.setTextureOffset(30, 0);
+head.addBox(1, 18, -2, 6, 4, 4);
+head.setTextureOffset(0, 15);
+head.addBox(0, 8, 1, 1, 6, 6);
+head.setTextureOffset(0, 15);
+head.addBox(7, 8, 1, 1, 6, 6);
+
+body.clear();
+body.setTextureOffset(26, 8);
+body.addBox(0, 14, 7, 8, 8, 10);
+
+rArm.clear();
+rArm.setTextureOffset(14, 15);
+rArm.addBox(4, 18, 14, 3, 7, 3);
+
+lArm.clear();
+lArm.setTextureOffset(14, 15);
+lArm.addBox(1, 18, 14, 3, 7, 3);
+
+rLeg.clear();
+rLeg.setTextureOffset(14, 15);
+rLeg.addBox(0, 8, 6, 3, 7, 3);
+
+lLeg.clear();
+lLeg.setTextureOffset(14, 15);
+lLeg.addBox(5, 8, 6, 3, 7, 3);
+
+}
+
+var NidorinaRenderType = Renderer.createHumanoidRenderer();
+addNidorinaRenderType(NidorinaRenderType);
+
+function addNidorinoRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+head.setTextureOffset(0, 0);
+head.addBox(0, 14, 0, 8, 8, 7);
+head.setTextureOffset(30, 0);
+head.addBox(1, 18, -2, 6, 4, 4);
+head.setTextureOffset(0, 15);
+head.addBox(0, 8, 1, 1, 6, 6);
+head.setTextureOffset(0, 15);
+head.addBox(7, 8, 1, 1, 6, 6);
+
+body.clear();
+body.setTextureOffset(26, 8);
+body.addBox(0, 14, 7, 8, 8, 10);
+
+rArm.clear();
+rArm.setTextureOffset(14, 15);
+rArm.addBox(4, 18, 14, 3, 7, 3);
+
+lArm.clear();
+lArm.setTextureOffset(14, 15);
+lArm.addBox(1, 18, 14, 3, 7, 3);
+
+rLeg.clear();
+rLeg.setTextureOffset(14, 15);
+rLeg.addBox(0, 8, 6, 3, 7, 3);
+
+lLeg.clear();
+lLeg.setTextureOffset(14, 15);
+lLeg.addBox(5, 8, 6, 3, 7, 3);
+
+}
+
+var NidorinoRenderType = Renderer.createHumanoidRenderer();
+addNidorinoRenderType(NidorinoRenderType);
+
+
+function addPidgeotRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+head.setTextureOffset(0, 0);
+head.addBox(-2, 9, -2, 4, 6, 3);
+head.setTextureOffset(14, 0);
+head.addBox(-1.5, 11, -4, 3, 2, 2);
+
+
+body.clear();
+body.setTextureOffset(0, 18, true);
+body.addBox(-3, 14, 0, 6, 6, 8);
+body.setTextureOffset(46, 0, true);
+body.addBox(-3, 14, 8, 6, 0, 6);
+
+rArm.clear();
+rArm.setTextureOffset(28, 16, true);
+rArm.addBox(2, 11, 1, 1, 6, 10);
+
+lArm.clear();
+lArm.setTextureOffset(28, 16, true);
+lArm.addBox(-3, 11, 1, 1, 6, 10);
+
+rLeg.clear();
+rLeg.setTextureOffset(36, 3, true);
+rLeg.addBox(0, 7, 4, 1, 5, 0);
+rLeg.setTextureOffset(29, 0, true);
+rLeg.addBox(-1, 11.9, 1, 3, 0, 3);
+
+lLeg.clear();
+lLeg.setTextureOffset(36, 3, true);
+lLeg.addBox(-1, 7, 4, 1, 5, 0);
+lLeg.setTextureOffset(29, 0, true);
+lLeg.addBox(-2, 11.9, 1, 3, 0, 3);
+
+}
+
+var PidgeotRenderType = Renderer.createHumanoidRenderer();
+addPidgeotRenderType(PidgeotRenderType);
+
+function addPidgeottoRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+head.setTextureOffset(0, 0);
+head.addBox(-2, 10, -2, 4, 6, 3);
+head.setTextureOffset(14, 0);
+head.addBox(-1.5, 12, -4, 3, 2, 2);
+
+
+body.clear();
+body.setTextureOffset(0, 18, true);
+body.addBox(-3, 14, 0, 6, 6, 8);
+body.setTextureOffset(46, 0, true);
+body.addBox(-3, 14, 8, 6, 0, 6);
+
+rArm.clear();
+rArm.setTextureOffset(28, 18, true);
+rArm.addBox(2, 13, 1, 1, 4, 10);
+
+lArm.clear();
+lArm.setTextureOffset(28, 18, true);
+lArm.addBox(-3, 13, 1, 1, 4, 10);
+
+rLeg.clear();
+rLeg.setTextureOffset(36, 3, true);
+rLeg.addBox(0, 7, 4, 1, 5, 0);
+rLeg.setTextureOffset(29, 0, true);
+rLeg.addBox(-1, 11.9, 1, 3, 0, 3);
+
+lLeg.clear();
+lLeg.setTextureOffset(36, 3, true);
+lLeg.addBox(-1, 7, 4, 1, 5, 0);
+lLeg.setTextureOffset(29, 0, true);
+lLeg.addBox(-2, 11.9, 1, 3, 0, 3);
+
+}
+
+var PidgeottoRenderType = Renderer.createHumanoidRenderer();
+addPidgeottoRenderType(PidgeottoRenderType);
+
+
+function addQuilavaRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+//head
+head.setTextureOffset(0, 0);
+head.addBox(0, 15, -6, 5, 5, 6);
+
+body.clear();
+//body
+body.setTextureOffset(0, 16);
+body.addBox(0, 15, 0, 6, 5, 11);
+//fire on the body
+body.setTextureOffset(37, 0, true);
+body.addBox(-1, 9, 11, 8, 6, 0);
+
+rArm.clear();
+//arm
+rArm.setTextureOffset(37, 24);
+rArm.addBox(6, 18, 9, 2, 4, 2);
+
+lArm.clear();
+//arm
+lArm.setTextureOffset(37, 24);
+lArm.addBox(-2, 18, 9, 2, 4, 2);
+
+rLeg.clear();
+//leg
+rLeg.setTextureOffset(37, 24);
+rLeg.addBox(2, 8, 0, 2, 4, 2);
+
+lLeg.clear();
+//leg
+lLeg.setTextureOffset(37, 24);
+lLeg.addBox(2, 8, 0, 2, 4, 2);
+
+}
+
+var QuilavaRenderType = Renderer.createHumanoidRenderer();
+addQuilavaRenderType(QuilavaRenderType);
+
+
+function addSlowpokeRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+head.setTextureOffset(0, 0);
+head.addBox(-2, 10, -2, 8, 8, 8);
+
+body.clear();
+body.setTextureOffset(12, 8);
+body.addBox(-3, 12, 4, 10, 8, 16);
+body.setTextureOffset(18, 14);
+body.addBox(0.5, 12, 18, 3, 3, 10);
+
+rArm.clear();
+rArm.setTextureOffset(0, 16);
+rArm.addBox(3, 18, 4, 4, 4, 4);
+
+lArm.clear();
+lArm.setTextureOffset(0, 16);
+lArm.addBox(-3, 18, 4, 4, 4, 4);
+
+rLeg.clear();
+rLeg.setTextureOffset(0, 16);
+rLeg.addBox(-1, 8, 16, 4, 4, 4);
+
+lLeg.clear();
+lLeg.setTextureOffset(0, 16);
+lLeg.addBox(1, 8, 16, 4, 4, 4);
+
+}
+
+var SlowpokeRenderType = Renderer.createHumanoidRenderer();
+addSlowpokeRenderType(SlowpokeRenderType);
+
+function addSpearowRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+head.setTextureOffset(0, 0, true);
+head.addBox(-2, 10, -2, 4, 6, 3);
+head.setTextureOffset(14, 0, true);
+head.addBox(-1.5, 12, -4, 3, 2, 2);
+head.setTextureOffset(50, 0, true);
+head.addBox(-2, 10, 1, 4, 6, 3);
+
+
+body.clear();
+body.setTextureOffset(0, 18);
+body.addBox(-3, 14, 0, 6, 6, 8);
+
+rArm.clear();
+rArm.setTextureOffset(24, 13, true);
+rArm.addBox(1.5, 13, 1, 1, 4, 6);
+
+lArm.clear();
+lArm.setTextureOffset(38, 13, true);
+lArm.addBox(-2.5, 13, 1, 1, 4, 6);
+
+rLeg.clear();
+rLeg.setTextureOffset(36, 3, true);
+rLeg.addBox(0, 7, 4, 1, 5, 0);
+rLeg.setTextureOffset(29, 0, true);
+rLeg.addBox(-1, 11.9, 1, 3, 0, 3);
+
+lLeg.clear();
+lLeg.setTextureOffset(36, 3, true);
+lLeg.addBox(-1, 7, 4, 1, 5, 0);
+lLeg.setTextureOffset(29, 0, true);
+lLeg.addBox(-2, 11.9, 1, 3, 0, 3);
+
+}
+
+var SpearowRenderType = Renderer.createHumanoidRenderer();
+addSpearowRenderType(SpearowRenderType);
+
+
+
+function addSunfloraRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+head.setTextureOffset(0, 0, true);
+head.addBox(-2, 3, -2, 7, 7, 5);
+head.setTextureOffset(24, 0, true);
+head.addBox(-4, 1, 1, 11, 11, 0);
+
+body.clear();
+body.setTextureOffset(0, 19);
+body.addBox(-1.5, 10, -1, 6, 8, 5);
+
+rArm.clear();
+rArm.setTextureOffset(44, 20, true);
+rArm.addBox(-4, 10, 0, 10, 4, 0);
+
+lArm.clear();
+lArm.setTextureOffset(44, 16, true);
+lArm.addBox(-3, 10, 0, 10, 4, 0);
+
+rLeg.clear();
+rLeg.setTextureOffset(20, 17, true);
+rLeg.addBox(1, 6, 0, 2, 5, 2);
+rLeg.setTextureOffset(22, 22, true);
+rLeg.addBox(0, 11, -4, 3, 1, 6);
+
+lLeg.clear();
+lLeg.setTextureOffset(20, 17, true);
+lLeg.addBox(0, 6, 0, 2, 5, 2);
+lLeg.setTextureOffset(22, 22, true);
+lLeg.addBox(0, 11, -4, 3, 1, 6);
+
+}
+
+var SunfloraRenderType = Renderer.createHumanoidRenderer();
+addSunfloraRenderType(SunfloraRenderType);
+
+
+function addSunkernRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+
+
+body.clear();
+body.setTextureOffset(0, 0, true);
+body.addBox(-2, 14, 0, 8, 10, 7);
+body.setTextureOffset(0, 0, true);
+body.addBox(1.5, 11, 3, 1, 3, 1);
+body.setTextureOffset(-14, 17, true);
+body.addBox(-7, 11, 1.5, 9, 0, 5);
+body.setTextureOffset(-14, 22, true);
+body.addBox(2, 11, 1.5, 9, 0, 5);
+
+rArm.clear();
+
+lArm.clear();
+
+rLeg.clear();
+
+lLeg.clear();
+
+}
+
+var SunkernRenderType = Renderer.createHumanoidRenderer();
+addSunkernRenderType(SunkernRenderType);
+
+function addSwellowRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+head.setTextureOffset(0, 0);
+head.addBox(-2, -4, -2, 6, 5, 5);
+head.setTextureOffset(0, 10);
+head.addBox(-1, -4, 2, 4, 4, 5);
+head.setTextureOffset(16, 22);
+head.addBox(-0.5, -2, -5, 3, 1, 3);
+head.setTextureOffset(20, 19);
+head.addBox(0, -1, -4, 2, 1, 2);
+
+body.clear();
+body.setTextureOffset(0, 22, true);
+body.addBox(-2, 1, 0, 6, 6, 4);
+body.setTextureOffset(22, 0, true);
+body.addBox(-2.5, 2, 4, 7, 5, 10);
+body.setTextureOffset(46, 15, true);
+body.addBox(-2, 2, 14, 1, 1, 8);
+body.setTextureOffset(46, 15, true);
+body.addBox(3, 2, 14, 1, 1, 8);
+body.setTextureOffset(23, 22, true);
+body.addBox(-15, 3, 6, 13, 0, 5);
+body.setTextureOffset(23, 27, true);
+body.addBox(4, 3, 6, 13, 0, 5);
+
+rArm.clear();
+
+lArm.clear();
+
+rLeg.clear();
+rLeg.setTextureOffset(22, 28);
+rLeg.addBox(0, -5, 6, 2, 3, 1);
+
+lLeg.clear();
+lLeg.setTextureOffset(22, 28);
+lLeg.addBox(0, -5, 6, 2, 3, 1);
+
+}
+
+var SwellowRenderType = Renderer.createHumanoidRenderer();
+addSwellowRenderType(SwellowRenderType);
+
+function addTaillowRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+head.setTextureOffset(0, 0);
+head.addBox(-2, -4, -2, 3, 3, 3);
+head.setTextureOffset(0, 6);
+head.addBox(-2, -2, -3, 3, 1, 1);
+
+body.clear();
+body.setTextureOffset(0, 8, true);
+body.addBox(-2, -3, 1, 3, 3, 5);
+body.setTextureOffset(-3, 16, true);
+body.addBox(-9, -3, 2, 7, 0, 3);
+body.setTextureOffset(-3, 19, true);
+body.addBox(1, -3, 2, 7, 0, 3);
+body.setTextureOffset(21, 0, true);
+body.addBox(-2, -3, 6, 1, 1, 5);
+body.setTextureOffset(21, 0, true);
+body.addBox(0, -3, 6, 1, 1, 5);
+
+rArm.clear();
+
+lArm.clear();
+
+rLeg.clear();
+
+lLeg.clear();
+
+}
+
+var TaillowRenderType = Renderer.createHumanoidRenderer();
+addTaillowRenderType(TaillowRenderType);
+
+function addTentacoolRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+
+body.clear();
+body.setTextureOffset(0, 0);
+body.addBox(0, 6, 0, 12, 16, 12);
+body.setTextureOffset(56, 0);
+body.addBox(0, 22, 6, 2, 18, 2);
+body.setTextureOffset(56, 0);
+body.addBox(10, 22, 6, 2, 18, 2);
+
+rArm.clear();
+
+lArm.clear();
+
+rLeg.clear();
+
+lLeg.clear();
+
+}
+
+var TentacoolRenderType = Renderer.createHumanoidRenderer();
+addTentacoolRenderType(TentacoolRenderType);
+
+function addTentacruelRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+
+body.clear();
+body.setTextureOffset(0, 0, true);
+body.addBox(0, 5, 0, 6, 12, 6);
+body.setTextureOffset(24, 10, true);
+body.addBox(-1.5, 6, -1.5, 9, 10, 9);
+body.setTextureOffset(52, 0, true);
+body.addBox(0, 17, 1, 1, 9, 1);
+body.setTextureOffset(52, 0, true);
+body.addBox(2, 17, 0, 1, 9, 1);
+body.setTextureOffset(52, 0, true);
+body.addBox(4, 17, 1, 1, 9, 1);
+body.setTextureOffset(52, 0, true);
+body.addBox(5, 17, 2, 1, 9, 1);
+body.setTextureOffset(52, 0, true);
+body.addBox(5, 17, 4, 1, 9, 1);
+body.setTextureOffset(52, 0, true);
+body.addBox(3, 17, 5, 1, 9, 1);
+body.setTextureOffset(52, 0, true);
+body.addBox(1, 17, 5, 1, 9, 1);
+body.setTextureOffset(52, 0, true);
+body.addBox(0, 17, 3, 1, 9, 1);
+
+rArm.clear();
+
+lArm.clear();
+
+rLeg.clear();
+
+lLeg.clear();
+
+}
+
+var TentacruelRenderType = Renderer.createHumanoidRenderer();
+addTentacruelRenderType(TentacruelRenderType);
+
+function addTogepiRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+
+
+body.clear();
+body.setTextureOffset(0, 0);
+body.addBox(0, 8, 0, 7, 4, 7);
+body.setTextureOffset(0, 18);
+body.addBox(0, 12, 0, 7, 7, 7);
+body.setTextureOffset(34, 10, true);
+body.addBox(0, 6, 0, 7, 2, 0);
+
+rArm.clear();
+rArm.setTextureOffset(33, 27);
+rArm.addBox(3, 10, 2, 4, 2, 3);
+
+lArm.clear();
+lArm.setTextureOffset(33, 27);
+lArm.addBox(0, 10, 2, 4, 2, 3);
+
+rLeg.clear();
+rLeg.setTextureOffset(33, 20);
+rLeg.addBox(2, 6, 2, 2, 3, 2);
+
+lLeg.clear();
+lLeg.setTextureOffset(33, 20);
+lLeg.addBox(3, 6, 2, 2, 3, 2);
+
+}
+
+var TogepiRenderType = Renderer.createHumanoidRenderer();
+addTogepiRenderType(TogepiRenderType);
+
+function addTorchicRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+head.setTextureOffset(0, 0);
+head.addBox(-0.5, 3, 0, 7, 7, 7);
+head.setTextureOffset(0, 15);
+head.addBox(1, 7, -2, 4, 1, 2);
+head.setTextureOffset(34, 16, true);
+head.addBox(0, -1, 4, 6, 4, 0);
+
+body.clear();
+body.setTextureOffset(30, 0);
+body.addBox(0, 10, 0, 6, 7, 6);
+body.setTextureOffset(46, 23, true);
+body.addBox(-1.5, 9.9, -1.5, 9, 0, 9);
+
+rArm.clear();
+
+lArm.clear();
+
+rLeg.clear();
+rLeg.setTextureOffset(0, 20);
+rLeg.addBox(2, 5, 3, 1, 5, 1);
+rLeg.setTextureOffset(0, 26);
+rLeg.addBox(1, 10, 0, 3, 1, 4);
+
+lLeg.clear();
+lLeg.setTextureOffset(0, 20);
+lLeg.addBox(3, 5, 3, 1, 5, 1);
+lLeg.setTextureOffset(0, 26);
+lLeg.addBox(2, 10, 0, 3, 1, 4);
+
+}
+
+var TorchicRenderType = Renderer.createHumanoidRenderer();
+addTorchicRenderType(TorchicRenderType);
+
+function addTreeckoRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+head.setTextureOffset(0, 0);
+head.addBox(0, 5, 0, 5, 6, 5);
+head.setTextureOffset(20, 0);
+head.addBox(1, 8, -4, 3, 3, 4);
+
+body.clear();
+body.setTextureOffset(29, 9);
+body.addBox(0, 11, 0.5, 5, 7, 4);
+body.setTextureOffset(4, 16);
+body.addBox(2, 15, 4.5, 2, 3, 7);
+
+body.setTextureOffset(0, 24);
+body.addBox(-1, 13, 2.5, 1, 5, 1);
+body.setTextureOffset(40, 13);
+body.addBox(-2, 18, 1.5, 2, 2, 2);
+
+body.setTextureOffset(0, 24);
+body.addBox(5, 13, 2.5, 1, 5, 1);
+body.setTextureOffset(40, 13);
+body.addBox(5, 18, 1.5, 2, 2, 2);
+
+rArm.clear();
+
+lArm.clear();
+
+rLeg.clear();
+rLeg.setTextureOffset(0, 24);
+rLeg.addBox(2, 5, 2, 1, 5, 1);
+rLeg.setTextureOffset(1, 27);
+rLeg.addBox(1, 10, -1, 3, 1, 4);
+
+lLeg.clear();
+lLeg.setTextureOffset(0, 24);
+lLeg.addBox(2, 5, 2, 1, 5, 1);
+lLeg.setTextureOffset(1, 27);
+lLeg.addBox(1, 10, -1, 3, 1, 4);
+
+}
+
+var TreeckoRenderType = Renderer.createHumanoidRenderer();
+addTreeckoRenderType(TreeckoRenderType);
+
+function addTyphlosionRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+head.setTextureOffset(0, 0, true);
+head.addBox(1, 0, -3, 6, 5, 8);
+head.setTextureOffset(38, 21, true);
+head.addBox(-1, 5, 3, 10, 0, 8);
+head.setTextureOffset(26, 0, true);
+head.addBox(1, -2, 3, 1, 2, 3);
+head.addBox(6, -2, 3, 1, 2, 3);
+
+body.clear();
+body.setTextureOffset(34, 0);
+body.addBox(0, 5, 0, 8, 14, 7);
+
+rArm.clear();
+rArm.setTextureOffset(0, 14);
+rArm.addBox(3, 7, 1, 2, 2, 5);
+
+lArm.clear();
+lArm.setTextureOffset(0, 14);
+lArm.addBox(2, 7, 1, 2, 2, 5);
+
+rLeg.clear();
+rLeg.setTextureOffset(0, 14);
+rLeg.addBox(1, 5, 2, 2, 6, 4);
+rLeg.addBox(1, 9, 3, 2, 3, 2);
+
+lLeg.clear();
+lLeg.setTextureOffset(0, 14);
+lLeg.addBox(5, 5, 2, 2, 6, 4);
+lLeg.addBox(5, 9, 3, 2, 3, 2);
+
+}
+
+var TyphlosionRenderType = Renderer.createHumanoidRenderer();
+addTyphlosionRenderType(TyphlosionRenderType);
+
+function addUmbreonRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+//head
+head.setTextureOffset(28, 6);
+head.addBox(-2, 10, -2, 5, 5, 4);
+//mouth
+head.setTextureOffset(28, 15);
+head.addBox(-1.5, 13, -3, 4, 2, 2);
+//right ear
+head.setTextureOffset(2, 14);
+head.addBox(-2, 6, -1, 1, 4, 1);
+//left ear
+head.setTextureOffset(2, 14);
+head.addBox(2, 6, -1, 1, 4, 1);
+
+body.clear();
+//body
+body.setTextureOffset(0, 18);
+body.addBox(-2.5, 15, 0, 6, 4, 8);
+//tail
+body.setTextureOffset(29, 22);
+body.addBox(0, 13, 7, 1, 3, 7);
+
+rArm.clear();
+rArm.setTextureOffset(48, 0);
+rArm.addBox(3.5, 17, 0, 2, 5, 2);
+
+lArm.clear();
+lArm.setTextureOffset(56, 0);
+lArm.addBox(-4.5, 17, 0, 2, 5, 2);
+
+rLeg.clear();
+rLeg.setTextureOffset(48, 0);
+rLeg.addBox(-0.5, 7, 6, 2, 5, 2);
+
+lLeg.clear();
+lLeg.setTextureOffset(56, 0);
+lLeg.addBox(-0.5, 7, 6, 2, 5, 2);
+
+}
+
+var UmbreonRenderType = Renderer.createHumanoidRenderer();
+addUmbreonRenderType(UmbreonRenderType);
+
+function addVaporeonRenderType(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+//head
+head.setTextureOffset(28, 6);
+head.addBox(-2, 12, -4, 5, 5, 4);
+//mouth
+head.setTextureOffset(28, 15);
+head.addBox(-1.5, 15, -5, 4, 2, 2);
+//right ear
+head.setTextureOffset(0, 0, true);
+head.addBox(-8, 11, -3, 6, 3, 0);
+//left ear
+head.setTextureOffset(12, 0, true);
+head.addBox(3, 11, -3, 6, 3, 0);
+
+body.clear();
+//body 1
+body.setTextureOffset(0, 18);
+body.addBox(-2.5, 15, 0, 6, 4, 8);
+//body 2
+body.setTextureOffset(28, 24, true);
+body.addBox(-3.5, 12, -0.1, 8, 8, 0);
+//tail 1
+body.setTextureOffset(6, 18);
+body.addBox(0, 16, 8, 1, 1, 10);
+//tail 2
+body.setTextureOffset(0, 8);
+body.addBox(0.5, 14, 9, 0, 2, 8);
+
+rArm.clear();
+rArm.setTextureOffset(48, 0);
+rArm.addBox(3.5, 17, 0, 2, 5, 2);
+
+lArm.clear();
+lArm.setTextureOffset(56, 0);
+lArm.addBox(-4.5, 17, 0, 2, 5, 2);
+
+rLeg.clear();
+rLeg.setTextureOffset(48, 0);
+rLeg.addBox(-0.5, 7, 6, 2, 5, 2);
+
+lLeg.clear();
+lLeg.setTextureOffset(56, 0);
+lLeg.addBox(-0.5, 7, 6, 2, 5, 2);
+
+}
+
+var VaporeonRenderType = Renderer.createHumanoidRenderer();
+addVaporeonRenderType(VaporeonRenderType);
+
+
+
