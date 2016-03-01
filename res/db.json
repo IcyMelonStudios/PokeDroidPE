@@ -1,0 +1,25 @@
+{
+"pokemon":[
+    {
+	"name":"",
+	"model":"",
+	"texture":"",
+	"desc":"",
+	"moves":[0,0,0,0],
+	"spawn_rate":"",
+	"catch_rate":"",
+	"icon":"",
+	"sound":"",
+	"evolution":"",
+	"types":[],
+	"base": {
+        "Attack": 100, 
+        "Defense": 10, 
+        "HP": 100, 
+        "Sp.Atk": 100, 
+        "Sp.Def": 100, 
+        "Speed": 100
+        }
+	}
+]
+}
