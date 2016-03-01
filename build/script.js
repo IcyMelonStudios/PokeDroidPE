@@ -73,7 +73,7 @@ var pokemonSpawnRates = [0];
 var pokemonCatchRates = [0];
 var pokemonIcons = [emptyDrawable];
 var pokemonSounds = ["Empty"];
-
+var rPokemon = [];
 
 var pokeballStrength = []; pokeballStrength[716] = 0; pokeballStrength[717] = 5; pokeballStrength[718] = 10; pokeballStrength[719] = 100;
 var pokeballTextures = []; pokeballTextures[716] = "pokeballs/pokeball-normal.png"; pokeballTextures[717] = "pokeballs/pokeball-great.png"; pokeballTextures[718] = "pokeballs/pokeball-ultra.png"; pokeballTextures[719] = "pokeballs/pokeball-master.png"; 
@@ -1507,6 +1507,51 @@ pokemonSounds.push(sound);
 }
 
 
+var Pokemon = function(id){
+	this.id = id;
+	this.name;
+	this.model;
+	this.texture;
+	this.desc;
+	this.moves = [];
+	this.spawnR;
+	this.catchR;
+	this.icon;
+	this.sound;
+	this.evolution;
+	this.types = [];
+	this.base;
+	
+};
+
+
+
+	
+	function loadAllPokemon(){
+		var obj = JSON.parse(loadTextFile(path+"res/db.json"));
+		var pokemonArr = obj.pokemon;
+		for(var i in pokemonArr){
+			rPokemon.push(loadPokemon(new Pokemon(i)));
+		}
+	}
+	function loadPokemon(pkmn){
+		var id = pkmn.id;
+		var obj = JSON.parse(loadTextFile(path+"res/db.json"));
+		pkmn.name = obj.pokemon[id].name;
+		pkmn.model = eval(obj.pokemon[id].model);
+		pkmn.texture = obj.pokemon[id].texture;
+		pkmn.desc = obj.pokemon[id].desc;
+		pkmn.spawnR = obj.pokemon[id].spawn_rate;
+		pkmn.catchR = obj.pokemon[id].catch_rate;
+		pkmn.icon = obj.pokemon[id].icon;
+		pkmn.sound = obj.pokemon[id].sound;
+		pkmn.evolution = obj.pokemon[id].evolution;
+		pkmn.moves = obj.pokemon[id].moves;
+		pkmn.types = obj.pokemon[id].types;
+		pkmn.base = obj.pokemon[id].base;
+		
+		return pkmn;
+	}
 
 
 
@@ -1541,7 +1586,8 @@ strin.append(java.lang.Character(jk));
 loader = strin.toString();
     fos.close();
 	}
-	catch(err){}
+	catch(err){return null}
+	return loader;
 }
 
 
