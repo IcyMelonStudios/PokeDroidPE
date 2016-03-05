@@ -1567,13 +1567,20 @@ var Pokemon = function(id){
 		pkmn.icon = obj.pokemon[id].icon;
 		pkmn.sound = obj.pokemon[id].sound;
 		pkmn.evolution = obj.pokemon[id].evolution;
-		pkmn.moves = obj.pokemon[id].moves;
+		pkmn.skills = obj.pokemon[id].skills;
 		pkmn.types = obj.pokemon[id].types;
 		pkmn.base = obj.pokemon[id].base;
 		
 		return pkmn;
 	}
-
+function getPokemon(id){
+	for(var i in rPokemon){
+		if(i.nId==id){
+			return i;
+		}
+	}
+	return null;
+}
 
 
 

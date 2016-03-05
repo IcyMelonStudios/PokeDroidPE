@@ -12,7 +12,7 @@ ______     _       ______           _     _______ _____
 {
 "pokemon":[
     {
-	"national_id": 1;
+	"national_id": 1
 	"name":"Bulbasaur",
 	"model":"BulbasaurRenderer",
 	"texture":"Bulbasaur.png",
@@ -113,7 +113,7 @@ ______     _       ______           _     _______ _____
 	},
 	
 	{
-	"national_id": 2;
+	"national_id": 2
 	"name":"Ivysaur",
 	"model":"IvysaurRenderer",
 	"texture":"Ivysaur.png",
@@ -217,7 +217,7 @@ ______     _       ______           _     _______ _____
 	},
 	
 	{
-	"national_id": 3;
+	"national_id": 3
 	"name":"Venusaur",
 	"model":"VenusaurRenderer",
 	"texture":"Venusaur.png",
