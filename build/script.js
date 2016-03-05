@@ -991,7 +991,7 @@ clientMessage("     Oh, no! The Pokemon broke free!");
 		else
 		var sPokemon = Level.spawnMob(AXIS_holder[0], AXIS_holder[1], AXIS_holder[2], 11, "pokemon-textures/"+rPokemon[ID_holder].texture);
 		Entity.setHealth(sPokemon, 9999999999999);
-		Entity.setRenderType(sPokemon, rPokemon[ID_holder].model.renderType);
+		Entity.setRenderer(sPokemon, rPokemon[ID_holder].model.renderType);
 		Entity.setNameTag(sPokemon, "Wild " + rPokemon[ID_holder].name + " Lv." + LVL_holder);
 		Entity.setCollisionSize(sPokemon,1,2);
 		if(ID_holder == 33 || ID_holder == 34)
@@ -1807,7 +1807,7 @@ function sendOutPokemon(id, lvl)
 {
 pokemonHolder = Level.spawnMob(getPlayerX(), getPlayerY() + 1, getPlayerZ(), 11, "pokemon-textures/" + rPokemon[id].texture);
 Entity.setHealth(pokemonHolder, 9999999999999);
-Entity.setRenderType(pokemonHolder, rPokemon[id].model.renderType);
+Entity.setRenderer(pokemonHolder, rPokemon[id].model.renderType);
 Entity.setNameTag(pokemonHolder, rPokemon[id].name + " Lv."+lvl);
 Entity.setCollisionSize(pokemonHolder, 1, 2);
 setVelX(pokemonHolder, 0.72 * Math.cos((getYaw()+90)*(Math.PI/180))); 
@@ -1832,7 +1832,7 @@ function catchPokemon(ent, item, hp)
 {
 	removeItem(item);
 	Pokeball = Level.spawnMob(Entity.getX(ent), Entity.getY(ent) + 2, Entity.getZ(ent), 11, pokeballTextures[item]);
-    Entity.setRenderType(Pokeball, PokeballRenderer.renderType);
+    Entity.setRenderer(Pokeball, PokeballRenderer.renderType);
 	if(calculateCatchRate(getIdFromNameTag(ent), hp, pokeballStrength[item]) == 1)
 	{
 		recentlyCatched = true;
@@ -1913,7 +1913,7 @@ function spawnPokemon(id,x,y,z){
 		else
 		var sPokemon = Level.spawnMob(x + pokemonsToSpawn - 1, y, z, 11, "pokemon-textures/"+rPokemon[id].texture);
 		Entity.setHealth(sPokemon, 9999999999999);
-		Entity.setRenderType(sPokemon, rPokemon[id].model.renderType);
+		Entity.setRenderer(sPokemon, rPokemon[id].model.renderType);
 		rLevel = Math.floor((Math.random()*70)+1);
 		Entity.setNameTag(sPokemon, "Wild " + rPokemon[id].name + " Lv."+rLevel);
 		Entity.setCollisionSize(sPokemon,1,2);
@@ -6266,7 +6266,7 @@ var SudowoodoRenderer = Renderer.createHumanoidRenderer();
 addSudowoodoRenderer(SudowoodoRenderer);
 
 
-function addAerodactylRenderType(renderer)
+function addAerodactylRenderer(renderer)
 
 {
 
@@ -6330,10 +6330,10 @@ rLeg.clear();
 
 }
 
-var AerodactylRenderType = Renderer.createHumanoidRenderer();
-addAerodactylRenderType(AerodactylRenderType);
+var AerodactylRenderer = Renderer.createHumanoidRenderer();
+addAerodactylRenderer(AerodactylRenderer);
 
-function addBayleefRenderType(renderer)
+function addBayleefRenderer(renderer)
 
 {
 
@@ -6383,10 +6383,10 @@ lLeg.addBox(0, 6, 0, 3, 7, 3);
 
 }
 
-var BayleefRenderType = Renderer.createHumanoidRenderer();
-addBayleefRenderType(BayleefRenderType);
+var BayleefRenderer = Renderer.createHumanoidRenderer();
+addBayleefRenderer(BayleefRenderer);
 
-function addBeedrillRenderType(renderer)
+function addBeedrillRenderer(renderer)
 
 {
 
@@ -6453,10 +6453,10 @@ lLeg.clear();
 
 }
 
-var BeedrillRenderType = Renderer.createHumanoidRenderer();
-addBeedrillRenderType(BeedrillRenderType);
+var BeedrillRenderer = Renderer.createHumanoidRenderer();
+addBeedrillRenderer(BeedrillRenderer);
 
-function addBlazikenRenderType(renderer)
+function addBlazikenRenderer(renderer)
 
 {
 
@@ -6513,10 +6513,10 @@ lLeg.addBox(0, -5, 0, 5, 17, 5);
 
 }
 
-var BlazikenRenderType = Renderer.createHumanoidRenderer();
-addBlazikenRenderType(BlazikenRenderType);
+var BlazikenRenderer = Renderer.createHumanoidRenderer();
+addBlazikenRenderer(BlazikenRenderer);
 
-function addCharmeleonRenderType(renderer)
+function addCharmeleonRenderer(renderer)
 
 {
 
@@ -6566,10 +6566,10 @@ lLeg.addBox(0, 7, -1, 3, 5, 3);
 
 }
 
-var CharmeleonRenderType = Renderer.createHumanoidRenderer();
-addCharmeleonRenderType(CharmeleonRenderType);
+var CharmeleonRenderer = Renderer.createHumanoidRenderer();
+addCharmeleonRenderer(CharmeleonRenderer);
 
-function addCombuskenRenderType(renderer)
+function addCombuskenRenderer(renderer)
 
 {
 
@@ -6620,10 +6620,10 @@ lLeg.addBox(3, 11, -2, 5, 1, 6);
 
 }
 
-var CombuskenRenderType = Renderer.createHumanoidRenderer();
-addCombuskenRenderType(CombuskenRenderType);
+var CombuskenRenderer = Renderer.createHumanoidRenderer();
+addCombuskenRenderer(CombuskenRenderer);
 
-function addCroconawRenderType(renderer)
+function addCroconawRenderer(renderer)
 
 {
 
@@ -6670,10 +6670,10 @@ lLeg.addBox(5, 10, 3, 2, 2, 2);
 
 }
 
-var CroconawRenderType = Renderer.createHumanoidRenderer();
-addCroconawRenderType(CroconawRenderType);
+var CroconawRenderer = Renderer.createHumanoidRenderer();
+addCroconawRenderer(CroconawRenderer);
 
-function addDodrioRenderType(renderer)
+function addDodrioRenderer(renderer)
 
 {
 
@@ -6735,10 +6735,10 @@ lLeg.addBox(4, 11, 0, 3, 1, 5);
 
 }
 
-var DodrioRenderType = Renderer.createHumanoidRenderer();
-addDodrioRenderType(DodrioRenderType);
+var DodrioRenderer = Renderer.createHumanoidRenderer();
+addDodrioRenderer(DodrioRenderer);
 
-function addDunsparceRenderType(renderer)
+function addDunsparceRenderer(renderer)
 
 {
 
@@ -6777,10 +6777,10 @@ lLeg.clear();
 
 }
 
-var DunsparceRenderType = Renderer.createHumanoidRenderer();
-addDunsparceRenderType(DunsparceRenderType);
+var DunsparceRenderer = Renderer.createHumanoidRenderer();
+addDunsparceRenderer(DunsparceRenderer);
 
-function addEeveeRenderType(renderer)
+function addEeveeRenderer(renderer)
 
 {
 
@@ -6834,10 +6834,10 @@ lLeg.addBox(-0.5, 7, 6, 2, 5, 2);
 
 }
 
-var EeveeRenderType = Renderer.createHumanoidRenderer();
-addEeveeRenderType(EeveeRenderType);
+var EeveeRenderer = Renderer.createHumanoidRenderer();
+addEeveeRenderer(EeveeRenderer);
 
-function addEspeonRenderType(renderer)
+function addEspeonRenderer(renderer)
 
 {
 
@@ -6897,10 +6897,10 @@ lLeg.addBox(-0.5, 7, 6, 2, 5, 2);
 
 }
 
-var EspeonRenderType = Renderer.createHumanoidRenderer();
-addEspeonRenderType(EspeonRenderType);
+var EspeonRenderer = Renderer.createHumanoidRenderer();
+addEspeonRenderer(EspeonRenderer);
 
-function addFeraligatrRenderType(renderer)
+function addFeraligatrRenderer(renderer)
 
 {
 
@@ -6973,10 +6973,10 @@ lLeg.addBox(8, 8, -2, 4, 2, 6);
 
 }
 
-var FeraligatrRenderType = Renderer.createHumanoidRenderer();
-addFeraligatrRenderType(FeraligatrRenderType);
+var FeraligatrRenderer = Renderer.createHumanoidRenderer();
+addFeraligatrRenderer(FeraligatrRenderer);
 
-function addFlareonRenderType(renderer)
+function addFlareonRenderer(renderer)
 
 {
 
@@ -7033,11 +7033,11 @@ lLeg.addBox(-0.5, 7, 6, 2, 5, 2);
 
 }
 
-var FlareonRenderType = Renderer.createHumanoidRenderer();
-addFlareonRenderType(FlareonRenderType);
+var FlareonRenderer = Renderer.createHumanoidRenderer();
+addFlareonRenderer(FlareonRenderer);
 
 
-function addGengarRenderType(renderer)
+function addGengarRenderer(renderer)
 
 {
 
@@ -7078,10 +7078,10 @@ lLeg.clear();
 
 }
 
-var GengarRenderType = Renderer.createHumanoidRenderer();
-addGengarRenderType(GengarRenderType);
+var GengarRenderer = Renderer.createHumanoidRenderer();
+addGengarRenderer(GengarRenderer);
 
-function addGolbatRenderType(renderer)
+function addGolbatRenderer(renderer)
 
 {
 
@@ -7131,10 +7131,10 @@ lLeg.clear();
 
 }
 
-var GolbatRenderType = Renderer.createHumanoidRenderer();
-addGolbatRenderType(GolbatRenderType);
+var GolbatRenderer = Renderer.createHumanoidRenderer();
+addGolbatRenderer(GolbatRenderer);
 
-function addGolemRenderType(renderer)
+function addGolemRenderer(renderer)
 
 {
 
@@ -7175,10 +7175,10 @@ lLeg.addBox(3, 7, 4, 3, 5, 3);
 
 }
 
-var GolemRenderType = Renderer.createHumanoidRenderer();
-addGolemRenderType(GolemRenderType);
+var GolemRenderer = Renderer.createHumanoidRenderer();
+addGolemRenderer(GolemRenderer);
 
-function addGravelerRenderType(renderer)
+function addGravelerRenderer(renderer)
 
 {
 
@@ -7220,10 +7220,10 @@ lLeg.addBox(6, 8, 6, 3, 4, 3);
 
 }
 
-var GravelerRenderType = Renderer.createHumanoidRenderer();
-addGravelerRenderType(GravelerRenderType);
+var GravelerRenderer = Renderer.createHumanoidRenderer();
+addGravelerRenderer(GravelerRenderer);
 
-function addGrovyleRenderType(renderer)
+function addGrovyleRenderer(renderer)
 
 {
 
@@ -7278,10 +7278,10 @@ lLeg.addBox(0, 11, 0, 1, 1, 6);
 
 }
 
-var GrovyleRenderType = Renderer.createHumanoidRenderer();
-addGrovyleRenderType(GrovyleRenderType);
+var GrovyleRenderer = Renderer.createHumanoidRenderer();
+addGrovyleRenderer(GrovyleRenderer);
 
-function addHaunterRenderType(renderer)
+function addHaunterRenderer(renderer)
 
 {
 
@@ -7334,11 +7334,11 @@ lLeg.clear();
 
 }
 
-var HaunterRenderType = Renderer.createHumanoidRenderer();
-addHaunterRenderType(HaunterRenderType);
+var HaunterRenderer = Renderer.createHumanoidRenderer();
+addHaunterRenderer(HaunterRenderer);
 
 
-function addJolteonRenderType(renderer)
+function addJolteonRenderer(renderer)
 
 {
 
@@ -7393,10 +7393,10 @@ lLeg.addBox(-0.5, 7, 6, 2, 5, 2);
 
 }
 
-var JolteonRenderType = Renderer.createHumanoidRenderer();
-addJolteonRenderType(JolteonRenderType);
+var JolteonRenderer = Renderer.createHumanoidRenderer();
+addJolteonRenderer(JolteonRenderer);
 
-function addKakunaRenderType(renderer)
+function addKakunaRenderer(renderer)
 
 {
 
@@ -7427,10 +7427,10 @@ lLeg.clear();
 
 }
 
-var KakunaRenderType = Renderer.createHumanoidRenderer();
-addKakunaRenderType(KakunaRenderType);
+var KakunaRenderer = Renderer.createHumanoidRenderer();
+addKakunaRenderer(KakunaRenderer);
 
-function addKoffingRenderType(renderer)
+function addKoffingRenderer(renderer)
 
 {
 
@@ -7459,11 +7459,11 @@ lLeg.clear();
 
 }
 
-var KoffingRenderType = Renderer.createHumanoidRenderer();
-addKoffingRenderType(KoffingRenderType);
+var KoffingRenderer = Renderer.createHumanoidRenderer();
+addKoffingRenderer(KoffingRenderer);
 
 
-function addMetapodRenderType(renderer)
+function addMetapodRenderer(renderer)
 
 {
 
@@ -7494,12 +7494,12 @@ lLeg.clear();
 
 }
 
-var MetapodRenderType = Renderer.createHumanoidRenderer();
-addMetapodRenderType(MetapodRenderType);
+var MetapodRenderer = Renderer.createHumanoidRenderer();
+addMetapodRenderer(MetapodRenderer);
 
 
 
-function addMarshtompRenderType(renderer)
+function addMarshtompRenderer(renderer)
 
 {
 
@@ -7544,10 +7544,10 @@ lLeg.addBox(1, 6, 0, 3, 6, 3);
 
 }
 
-var MarshtompRenderType = Renderer.createHumanoidRenderer();
-addMarshtompRenderType(MarshtompRenderType);
+var MarshtompRenderer = Renderer.createHumanoidRenderer();
+addMarshtompRenderer(MarshtompRenderer);
 
-function addMankeyRenderType(renderer)
+function addMankeyRenderer(renderer)
 
 {
 
@@ -7602,11 +7602,11 @@ lLeg.addBox(3.5, 11, 0, 3, 2, 5);
 
 }
 
-var MankeyRenderType = Renderer.createHumanoidRenderer();
-addMankeyRenderType(MankeyRenderType);
+var MankeyRenderer = Renderer.createHumanoidRenderer();
+addMankeyRenderer(MankeyRenderer);
 
 
-function addMudkipRenderType(renderer)
+function addMudkipRenderer(renderer)
 
 {
 
@@ -7663,10 +7663,10 @@ lLeg.addBox(0, 7, -4, 2, 4, 2);
 
 }
 
-var MudkipRenderType = Renderer.createHumanoidRenderer();
-addMudkipRenderType(MudkipRenderType);
+var MudkipRenderer = Renderer.createHumanoidRenderer();
+addMudkipRenderer(MudkipRenderer);
 
-function addMeganiumRenderType(renderer)
+function addMeganiumRenderer(renderer)
 
 {
 
@@ -7722,12 +7722,12 @@ lLeg.addBox(0, 6, 0, 3, 7, 3);
 
 }
 
-var MeganiumRenderType = Renderer.createHumanoidRenderer();
-addMeganiumRenderType(MeganiumRenderType);
+var MeganiumRenderer = Renderer.createHumanoidRenderer();
+addMeganiumRenderer(MeganiumRenderer);
 
 
 
-function addWailmerRenderType(renderer)
+function addWailmerRenderer(renderer)
 
 {
 
@@ -7760,10 +7760,10 @@ lLeg.clear();
 
 }
 
-var WailmerRenderType = Renderer.createHumanoidRenderer();
-addWailmerRenderType(WailmerRenderType);
+var WailmerRenderer = Renderer.createHumanoidRenderer();
+addWailmerRenderer(WailmerRenderer);
 
-function addWailordRenderType(renderer)
+function addWailordRenderer(renderer)
 
 {
 
@@ -7800,12 +7800,12 @@ lLeg.clear();
 
 }
 
-var WailordRenderType = Renderer.createHumanoidRenderer();
-addWailordRenderType(WailordRenderType);
+var WailordRenderer = Renderer.createHumanoidRenderer();
+addWailordRenderer(WailordRenderer);
 
 
 
-function addWeedleRenderType(renderer)
+function addWeedleRenderer(renderer)
 
 {
 
@@ -7840,10 +7840,10 @@ lLeg.clear();
 
 }
 
-var WeedleRenderType = Renderer.createHumanoidRenderer();
-addWeedleRenderType(WeedleRenderType);
+var WeedleRenderer = Renderer.createHumanoidRenderer();
+addWeedleRenderer(WeedleRenderer);
 
-function addWeezingRenderType(renderer)
+function addWeezingRenderer(renderer)
 
 {
 
@@ -7876,10 +7876,10 @@ lLeg.clear();
 
 }
 
-var WeezingRenderType = Renderer.createHumanoidRenderer();
-addWeezingRenderType(WeezingRenderType);
+var WeezingRenderer = Renderer.createHumanoidRenderer();
+addWeezingRenderer(WeezingRenderer);
 
-function addWobbuffetRenderType(renderer)
+function addWobbuffetRenderer(renderer)
 
 {
 
@@ -7918,12 +7918,12 @@ lLeg.addBox(3, 6, -4, 4, 3, 4);
 
 }
 
-var WobbuffetRenderType = Renderer.createHumanoidRenderer();
-addWobbuffetRenderType(WobbuffetRenderType);
+var WobbuffetRenderer = Renderer.createHumanoidRenderer();
+addWobbuffetRenderer(WobbuffetRenderer);
 
 
 
-function addCelebiRenderType(renderer)
+function addCelebiRenderer(renderer)
 
 {
 
@@ -7969,10 +7969,10 @@ lLeg.addBox(1, 2, 4, 1, 4, 1);
 
 }
 
-var CelebiRenderType = Renderer.createHumanoidRenderer();
-addCelebiRenderType(CelebiRenderType);
+var CelebiRenderer = Renderer.createHumanoidRenderer();
+addCelebiRenderer(CelebiRenderer);
 
-function addEnteiRenderType(renderer)
+function addEnteiRenderer(renderer)
 
 {
 
@@ -8026,10 +8026,10 @@ lLeg.addBox(1, 5.5, 11, 3, 7, 3);
 
 }
 
-var EnteiRenderType = Renderer.createHumanoidRenderer();
-addEnteiRenderType(EnteiRenderType);
+var EnteiRenderer = Renderer.createHumanoidRenderer();
+addEnteiRenderer(EnteiRenderer);
 
-function addMewtwoRenderType(renderer)
+function addMewtwoRenderer(renderer)
 
 {
 
@@ -8090,10 +8090,10 @@ lLeg.addBox(0.5, 5, 0.5, 2, 7, 2);
 
 }
 
-var MewtwoRenderType = Renderer.createHumanoidRenderer();
-addMewtwoRenderType(MewtwoRenderType);
+var MewtwoRenderer = Renderer.createHumanoidRenderer();
+addMewtwoRenderer(MewtwoRenderer);
 
-function addNidoranFRenderType(renderer)
+function addNidoranFRenderer(renderer)
 
 {
 
@@ -8138,10 +8138,10 @@ lLeg.addBox(4, 7, 5, 2, 4, 2);
 
 }
 
-var NidoranFRenderType = Renderer.createHumanoidRenderer();
-addNidoranFRenderType(NidoranFRenderType);
+var NidoranFRenderer = Renderer.createHumanoidRenderer();
+addNidoranFRenderer(NidoranFRenderer);
 
-function addNidoranMRenderType(renderer)
+function addNidoranMRenderer(renderer)
 
 {
 
@@ -8186,58 +8186,10 @@ lLeg.addBox(2, 7, 4, 2, 4, 2);
 
 }
 
-var NidoranMRenderType = Renderer.createHumanoidRenderer();
-addNidoranMRenderType(NidoranMRenderType);
+var NidoranMRenderer = Renderer.createHumanoidRenderer();
+addNidoranMRenderer(NidoranMRenderer);
 
-function addNidorinaRenderType(renderer)
-
-{
-
-var model = renderer.getModel();
-
-var head = model.getPart("head");
-var body = model.getPart("body");
-var rArm = model.getPart("rightArm");
-var lArm = model.getPart("leftArm");
-var rLeg = model.getPart("rightLeg");
-var lLeg = model.getPart("leftLeg");
-
-head.clear();
-head.setTextureOffset(0, 0);
-head.addBox(0, 14, 0, 8, 8, 7);
-head.setTextureOffset(30, 0);
-head.addBox(1, 18, -2, 6, 4, 4);
-head.setTextureOffset(0, 15);
-head.addBox(0, 8, 1, 1, 6, 6);
-head.setTextureOffset(0, 15);
-head.addBox(7, 8, 1, 1, 6, 6);
-
-body.clear();
-body.setTextureOffset(26, 8);
-body.addBox(0, 14, 7, 8, 8, 10);
-
-rArm.clear();
-rArm.setTextureOffset(14, 15);
-rArm.addBox(4, 18, 14, 3, 7, 3);
-
-lArm.clear();
-lArm.setTextureOffset(14, 15);
-lArm.addBox(1, 18, 14, 3, 7, 3);
-
-rLeg.clear();
-rLeg.setTextureOffset(14, 15);
-rLeg.addBox(0, 8, 6, 3, 7, 3);
-
-lLeg.clear();
-lLeg.setTextureOffset(14, 15);
-lLeg.addBox(5, 8, 6, 3, 7, 3);
-
-}
-
-var NidorinaRenderType = Renderer.createHumanoidRenderer();
-addNidorinaRenderType(NidorinaRenderType);
-
-function addNidorinoRenderType(renderer)
+function addNidorinaRenderer(renderer)
 
 {
 
@@ -8282,11 +8234,59 @@ lLeg.addBox(5, 8, 6, 3, 7, 3);
 
 }
 
-var NidorinoRenderType = Renderer.createHumanoidRenderer();
-addNidorinoRenderType(NidorinoRenderType);
+var NidorinaRenderer = Renderer.createHumanoidRenderer();
+addNidorinaRenderer(NidorinaRenderer);
+
+function addNidorinoRenderer(renderer)
+
+{
+
+var model = renderer.getModel();
+
+var head = model.getPart("head");
+var body = model.getPart("body");
+var rArm = model.getPart("rightArm");
+var lArm = model.getPart("leftArm");
+var rLeg = model.getPart("rightLeg");
+var lLeg = model.getPart("leftLeg");
+
+head.clear();
+head.setTextureOffset(0, 0);
+head.addBox(0, 14, 0, 8, 8, 7);
+head.setTextureOffset(30, 0);
+head.addBox(1, 18, -2, 6, 4, 4);
+head.setTextureOffset(0, 15);
+head.addBox(0, 8, 1, 1, 6, 6);
+head.setTextureOffset(0, 15);
+head.addBox(7, 8, 1, 1, 6, 6);
+
+body.clear();
+body.setTextureOffset(26, 8);
+body.addBox(0, 14, 7, 8, 8, 10);
+
+rArm.clear();
+rArm.setTextureOffset(14, 15);
+rArm.addBox(4, 18, 14, 3, 7, 3);
+
+lArm.clear();
+lArm.setTextureOffset(14, 15);
+lArm.addBox(1, 18, 14, 3, 7, 3);
+
+rLeg.clear();
+rLeg.setTextureOffset(14, 15);
+rLeg.addBox(0, 8, 6, 3, 7, 3);
+
+lLeg.clear();
+lLeg.setTextureOffset(14, 15);
+lLeg.addBox(5, 8, 6, 3, 7, 3);
+
+}
+
+var NidorinoRenderer = Renderer.createHumanoidRenderer();
+addNidorinoRenderer(NidorinoRenderer);
 
 
-function addPidgeotRenderType(renderer)
+function addPidgeotRenderer(renderer)
 
 {
 
@@ -8334,10 +8334,10 @@ lLeg.addBox(-2, 11.9, 1, 3, 0, 3);
 
 }
 
-var PidgeotRenderType = Renderer.createHumanoidRenderer();
-addPidgeotRenderType(PidgeotRenderType);
+var PidgeotRenderer = Renderer.createHumanoidRenderer();
+addPidgeotRenderer(PidgeotRenderer);
 
-function addPidgeottoRenderType(renderer)
+function addPidgeottoRenderer(renderer)
 
 {
 
@@ -8385,11 +8385,11 @@ lLeg.addBox(-2, 11.9, 1, 3, 0, 3);
 
 }
 
-var PidgeottoRenderType = Renderer.createHumanoidRenderer();
-addPidgeottoRenderType(PidgeottoRenderType);
+var PidgeottoRenderer = Renderer.createHumanoidRenderer();
+addPidgeottoRenderer(PidgeottoRenderer);
 
 
-function addQuilavaRenderType(renderer)
+function addQuilavaRenderer(renderer)
 
 {
 
@@ -8437,11 +8437,11 @@ lLeg.addBox(2, 8, 0, 2, 4, 2);
 
 }
 
-var QuilavaRenderType = Renderer.createHumanoidRenderer();
-addQuilavaRenderType(QuilavaRenderType);
+var QuilavaRenderer = Renderer.createHumanoidRenderer();
+addQuilavaRenderer(QuilavaRenderer);
 
 
-function addSlowpokeRenderType(renderer)
+function addSlowpokeRenderer(renderer)
 
 {
 
@@ -8482,10 +8482,10 @@ lLeg.addBox(1, 8, 16, 4, 4, 4);
 
 }
 
-var SlowpokeRenderType = Renderer.createHumanoidRenderer();
-addSlowpokeRenderType(SlowpokeRenderType);
+var SlowpokeRenderer = Renderer.createHumanoidRenderer();
+addSlowpokeRenderer(SlowpokeRenderer);
 
-function addSpearowRenderType(renderer)
+function addSpearowRenderer(renderer)
 
 {
 
@@ -8533,12 +8533,12 @@ lLeg.addBox(-2, 11.9, 1, 3, 0, 3);
 
 }
 
-var SpearowRenderType = Renderer.createHumanoidRenderer();
-addSpearowRenderType(SpearowRenderType);
+var SpearowRenderer = Renderer.createHumanoidRenderer();
+addSpearowRenderer(SpearowRenderer);
 
 
 
-function addSunfloraRenderType(renderer)
+function addSunfloraRenderer(renderer)
 
 {
 
@@ -8583,11 +8583,11 @@ lLeg.addBox(0, 11, -4, 3, 1, 6);
 
 }
 
-var SunfloraRenderType = Renderer.createHumanoidRenderer();
-addSunfloraRenderType(SunfloraRenderType);
+var SunfloraRenderer = Renderer.createHumanoidRenderer();
+addSunfloraRenderer(SunfloraRenderer);
 
 
-function addSunkernRenderType(renderer)
+function addSunkernRenderer(renderer)
 
 {
 
@@ -8623,10 +8623,10 @@ lLeg.clear();
 
 }
 
-var SunkernRenderType = Renderer.createHumanoidRenderer();
-addSunkernRenderType(SunkernRenderType);
+var SunkernRenderer = Renderer.createHumanoidRenderer();
+addSunkernRenderer(SunkernRenderer);
 
-function addSwellowRenderType(renderer)
+function addSwellowRenderer(renderer)
 
 {
 
@@ -8677,10 +8677,10 @@ lLeg.addBox(0, -5, 6, 2, 3, 1);
 
 }
 
-var SwellowRenderType = Renderer.createHumanoidRenderer();
-addSwellowRenderType(SwellowRenderType);
+var SwellowRenderer = Renderer.createHumanoidRenderer();
+addSwellowRenderer(SwellowRenderer);
 
-function addTaillowRenderType(renderer)
+function addTaillowRenderer(renderer)
 
 {
 
@@ -8721,10 +8721,10 @@ lLeg.clear();
 
 }
 
-var TaillowRenderType = Renderer.createHumanoidRenderer();
-addTaillowRenderType(TaillowRenderType);
+var TaillowRenderer = Renderer.createHumanoidRenderer();
+addTaillowRenderer(TaillowRenderer);
 
-function addTentacoolRenderType(renderer)
+function addTentacoolRenderer(renderer)
 
 {
 
@@ -8757,10 +8757,10 @@ lLeg.clear();
 
 }
 
-var TentacoolRenderType = Renderer.createHumanoidRenderer();
-addTentacoolRenderType(TentacoolRenderType);
+var TentacoolRenderer = Renderer.createHumanoidRenderer();
+addTentacoolRenderer(TentacoolRenderer);
 
-function addTentacruelRenderType(renderer)
+function addTentacruelRenderer(renderer)
 
 {
 
@@ -8807,10 +8807,10 @@ lLeg.clear();
 
 }
 
-var TentacruelRenderType = Renderer.createHumanoidRenderer();
-addTentacruelRenderType(TentacruelRenderType);
+var TentacruelRenderer = Renderer.createHumanoidRenderer();
+addTentacruelRenderer(TentacruelRenderer);
 
-function addTogepiRenderType(renderer)
+function addTogepiRenderer(renderer)
 
 {
 
@@ -8852,10 +8852,10 @@ lLeg.addBox(3, 6, 2, 2, 3, 2);
 
 }
 
-var TogepiRenderType = Renderer.createHumanoidRenderer();
-addTogepiRenderType(TogepiRenderType);
+var TogepiRenderer = Renderer.createHumanoidRenderer();
+addTogepiRenderer(TogepiRenderer);
 
-function addTorchicRenderType(renderer)
+function addTorchicRenderer(renderer)
 
 {
 
@@ -8900,10 +8900,10 @@ lLeg.addBox(2, 10, 0, 3, 1, 4);
 
 }
 
-var TorchicRenderType = Renderer.createHumanoidRenderer();
-addTorchicRenderType(TorchicRenderType);
+var TorchicRenderer = Renderer.createHumanoidRenderer();
+addTorchicRenderer(TorchicRenderer);
 
-function addTreeckoRenderType(renderer)
+function addTreeckoRenderer(renderer)
 
 {
 
@@ -8956,10 +8956,10 @@ lLeg.addBox(1, 10, -1, 3, 1, 4);
 
 }
 
-var TreeckoRenderType = Renderer.createHumanoidRenderer();
-addTreeckoRenderType(TreeckoRenderType);
+var TreeckoRenderer = Renderer.createHumanoidRenderer();
+addTreeckoRenderer(TreeckoRenderer);
 
-function addTyphlosionRenderType(renderer)
+function addTyphlosionRenderer(renderer)
 
 {
 
@@ -9005,10 +9005,10 @@ lLeg.addBox(5, 9, 3, 2, 3, 2);
 
 }
 
-var TyphlosionRenderType = Renderer.createHumanoidRenderer();
-addTyphlosionRenderType(TyphlosionRenderType);
+var TyphlosionRenderer = Renderer.createHumanoidRenderer();
+addTyphlosionRenderer(TyphlosionRenderer);
 
-function addUmbreonRenderType(renderer)
+function addUmbreonRenderer(renderer)
 
 {
 
@@ -9061,10 +9061,10 @@ lLeg.addBox(-0.5, 7, 6, 2, 5, 2);
 
 }
 
-var UmbreonRenderType = Renderer.createHumanoidRenderer();
-addUmbreonRenderType(UmbreonRenderType);
+var UmbreonRenderer = Renderer.createHumanoidRenderer();
+addUmbreonRenderer(UmbreonRenderer);
 
-function addVaporeonRenderType(renderer)
+function addVaporeonRenderer(renderer)
 
 {
 
@@ -9123,8 +9123,8 @@ lLeg.addBox(-0.5, 7, 6, 2, 5, 2);
 
 }
 
-var VaporeonRenderType = Renderer.createHumanoidRenderer();
-addVaporeonRenderType(VaporeonRenderType);
+var VaporeonRenderer = Renderer.createHumanoidRenderer();
+addVaporeonRenderer(VaporeonRenderer);
 
 
 
