@@ -593,7 +593,7 @@ calculateSpawningPossibility();
 
 loadResources();
 
-
+loadAllPokemon();
 showPokeInv();
 showSaveBtn();
 
@@ -1548,7 +1548,7 @@ var Pokemon = function(id){
 
 	
 function loadAllPokemon(){
-	var obj = JSON.parse(loadTextFile(path+"res/db.json"));
+	var obj = JSON.parse(loadTextFile(path+"/res/db.json"));
 	var pokemonArr = obj.pokemon;
 	for(var i in pokemonArr){
 		rPokemon.push(loadPokemon(new Pokemon(i)));
@@ -1556,7 +1556,7 @@ function loadAllPokemon(){
 }
 function loadPokemon(pkmn){
 	var id = pkmn.id;
-	var obj = JSON.parse(loadTextFile(path+"res/db.json"));
+	var obj = JSON.parse(loadTextFile(path+"/res/db.json"));
 	pkmn.name = obj.pokemon[id].name;
 	pkmn.nId = obj.pokemon[id].national_id;
 	pkmn.model = eval(obj.pokemon[id].model);
