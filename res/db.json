@@ -894,10 +894,322 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 105, 
             "Speed": 78
         }
+	},
+	
+	{
+	"national_id": 9,
+	"name":"Blastoise",
+	"model":"BlastoiseRenderer",
+	"texture":"Blastoise.png",
+	"desc":"It crushes its foe under its heavy body to cause fainting. In a pinch, it will withdraw inside its shell.",
+	"spawn_rate": 7,
+	"catch_rate": 6,
+	"icon":"009.png",
+	"sound":"pokemon/9.wav",
+	"evolution":0,
+	"types":[10],
+	"skills": {
+            "egg": [
+                453, 
+                392, 
+                396, 
+                362, 
+                406, 
+                252, 
+                175, 
+                193, 
+                114, 
+                243, 
+                54, 
+                300, 
+                330, 
+                287, 
+                323, 
+                281
+            ], 
+            "level_up": [
+                430, 
+                33, 
+                39, 
+                145, 
+                110, 
+                39, 
+                55, 
+                110, 
+                145, 
+                44, 
+                229, 
+                182, 
+                352, 
+                401, 
+                130, 
+                334, 
+                240, 
+                56
+            ], 
+            "tm": [
+                46, 
+                92, 
+                258, 
+                237, 
+                58, 
+                59, 
+                63, 
+                182, 
+                240, 
+                218, 
+                479, 
+                89, 
+                216, 
+                91, 
+                280, 
+                104, 
+                317, 
+                263, 
+                156, 
+                213, 
+                496, 
+                411, 
+                503, 
+                374, 
+                416, 
+                360, 
+                523, 
+                157, 
+                525, 
+                207, 
+                214, 
+                164, 
+                430, 
+                249, 
+                399, 
+                612, 
+                590, 
+                57, 
+                70, 
+                127
+            ], 
+            "transfer": [
+                291, 
+                308, 
+                8, 
+                196, 
+                231, 
+                200, 
+                324, 
+                173, 
+                518, 
+                428, 
+                264, 
+                290, 
+                203, 
+                419, 
+                445, 
+                363, 
+                250
+            ], 
+            "tutor": [
+                308, 
+                518
+            ]
+        },
+        "base": {
+            "Attack": 30, 
+            "Defense": 35, 
+            "HP": 45, 
+            "Sp.Atk": 20, 
+            "Sp.Def": 20, 
+            "Speed": 45
+        }
+	},
+	
+	{
+	"national_id": 10,
+	"name":"Caterpie",
+	"model":"CaterpieRenderer",
+	"texture":"Caterpie.png",
+	"desc":"For protection, it releases a horrible stench from the antennae on its head to drive away enemies.",
+	"spawn_rate": 40,
+	"catch_rate": 33,
+	"icon":"010.png",
+	"sound":"pokemon/10.wav",
+	"evolution":11,
+	"types":[6],
+	"skills": {
+            "level_up": [
+                33, 
+                81, 
+                450
+            ], 
+            "transfer": [
+                527, 
+                173
+            ]
+        },
+        "base": {
+            "Attack": 20, 
+            "Defense": 55, 
+            "HP": 50, 
+            "Sp.Atk": 25, 
+            "Sp.Def": 25, 
+            "Speed": 30
+        }
+	},
+	
+	{
+	"national_id": 11,
+	"name":"Metapod",
+	"model":"MetapodRenderer",
+	"texture":"Metapod.png",
+	"desc":"A steel-hard shell protects its tender body. It quietly endures hardships while awaiting evolution.",
+	"spawn_rate": 19,
+	"catch_rate": 16,
+	"icon":"011.png",
+	"sound":"pokemon/11.wav",
+	"evolution":12,
+	"types":[6],
+	"skills": {
+            "level_up": [
+                106, 
+                106
+            ], 
+            "transfer": [
+                450, 
+                527, 
+                334
+            ]
+        },
+        "base": {
+            "Attack": 45, 
+            "Defense": 50, 
+            "HP": 60, 
+            "Sp.Atk": 90, 
+            "Sp.Def": 80, 
+            "Speed": 70
+        }
+	},
+	
+	{
+	"national_id": 12,
+	"name":"Butterfree",
+	"model":"ButterfreeRenderer",
+	"texture":"Butterfree.png",
+	"desc":"It loves the honey of flowers and can locate flower patches that have even tiny amounts of pollen.",
+	"spawn_rate": 7,
+	"catch_rate": 6,
+	"icon":"012.png",
+	"sound":"pokemon/12.wav",
+	"evolution":0,
+	"types":[6,2],
+	"skills": {
+            "level_up": [
+                93, 
+                93, 
+                77, 
+                78, 
+                79, 
+                16, 
+                48, 
+                18, 
+                60, 
+                318, 
+                366, 
+                476, 
+                219, 
+                445, 
+                405, 
+                483
+            ],
+            "tm": [
+                92, 
+                474, 
+                237, 
+                241, 
+                63, 
+                182, 
+                240, 
+                355, 
+                219, 
+                218, 
+                76, 
+                216, 
+                94, 
+                247, 
+                104, 
+                332, 
+                263, 
+                156, 
+                213, 
+                168, 
+                496, 
+                412, 
+                512, 
+                416, 
+                148, 
+                522, 
+                244, 
+                611, 
+                138, 
+                207, 
+                214, 
+                369, 
+                164, 
+                590
+            ], 
+            "transfer": [
+                450, 
+                527, 
+                202, 
+                324, 
+                285, 
+                173, 
+                290, 
+                203, 
+                363, 
+                432
+            ]
+        },
+        "base": {
+            "Attack": 35, 
+            "Defense": 30, 
+            "HP": 40, 
+            "Sp.Atk": 20, 
+            "Sp.Def": 20, 
+            "Speed": 50
+        }
+	},
+	
+	{
+	"national_id": 13,
+	"name":"Weedle",
+	"model":"WeedleRenderer",
+	"texture":"Weedle.png",
+	"desc":"Often found in forests and grasslands. It has a sharp, toxic barb of around two inches on top of its head.",
+	"spawn_rate": 40,
+	"catch_rate": 33,
+	"icon":"013.png",
+	"sound":"pokemon/13.wav",
+	"evolution":14,
+	"types":[6,3],
+	"skills": {
+            "level_up": [
+                40, 
+                81, 
+                450
+            ], 
+            "transfer": [
+                527
+            ]
+        },
+        "base": {
+            "Attack": 25, 
+            "Defense": 50, 
+            "HP": 45, 
+            "Sp.Atk": 25, 
+            "Sp.Def": 25, 
+            "Speed": 35
+        }
 	}
-	
-	
-	
 	
 	
 	
