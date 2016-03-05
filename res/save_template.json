@@ -1,0 +1,65 @@
+{
+	"starter": 0,
+	"pokemon":[
+	{
+		"id": 0,
+		"hp": 0,
+		"exp": 0,
+		"lvl": 0,
+		"max_hp": 0,
+		"max_exp": 0,
+		"max_lvl": 0,
+		"nick": ""
+	},
+	{
+		"id": 0,
+		"hp": 0,
+		"exp": 0,
+		"lvl": 0,
+		"max_hp": 0,
+		"max_exp": 0,
+		"max_lvl": 0,
+		"nick": ""
+	},
+	{
+		"id": 0,
+		"hp": 0,
+		"exp": 0,
+		"lvl": 0,
+		"max_hp": 0,
+		"max_exp": 0,
+		"max_lvl": 0,
+		"nick": ""
+	},
+	{
+		"id": 0,
+		"hp": 0,
+		"exp": 0,
+		"lvl": 0,
+		"max_hp": 0,
+		"max_exp": 0,
+		"max_lvl": 0,
+		"nick": ""
+	},
+	{
+		"id": 0,
+		"hp": 0,
+		"exp": 0,
+		"lvl": 0,
+		"max_hp": 0,
+		"max_exp": 0,
+		"max_lvl": 0,
+		"nick": ""
+	},
+	{
+		"id": 0,
+		"hp": 0,
+		"exp": 0,
+		"lvl": 0,
+		"max_hp": 0,
+		"max_exp": 0,
+		"max_lvl": 0,
+		"nick": ""
+	}
+	]
+}
