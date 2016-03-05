@@ -11,7 +11,7 @@ ______     _       ______           _     _______ _____
 */
 {
 "pokemon":[
-    {
+    [
 	"national_id": 1,
 	"name":"Bulbasaur",
 	"model":"BulbasaurRenderer",
@@ -110,9 +110,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 80, 
             "Speed": 60
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 2,
 	"name":"Ivysaur",
 	"model":"IvysaurRenderer",
@@ -214,9 +214,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 100, 
             "Speed": 80
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 3,
 	"name":"Venusaur",
 	"model":"VenusaurRenderer",
@@ -330,9 +330,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 50, 
             "Speed": 65
         }
-	}
+	],
 	
-	{
+	[
 	"national_id": 4,
 	"name":"Charmander",
 	"model":"CharmanderRenderer",
@@ -437,10 +437,10 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 65, 
             "Speed": 80
         }
-	},
+	],
 	
 
-	{
+	[
 	"national_id": 5,
 	"name":"Charmeleon",
 	"model":"CharmeleonRenderer",
@@ -546,9 +546,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 85, 
             "Speed": 100
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 6,
 	"name":"Charizard",
 	"model":"CharizardRenderer",
@@ -678,9 +678,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 64, 
             "Speed": 43
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 7,
 	"name":"Squirtle",
 	"model":"SquirtleRenderer",
@@ -785,9 +785,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 80, 
             "Speed": 58
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 8,
 	"name":"Wartortle",
 	"model":"WartortleRenderer",
@@ -894,9 +894,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 105, 
             "Speed": 78
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 9,
 	"name":"Blastoise",
 	"model":"BlastoiseRenderer",
@@ -1021,9 +1021,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 20, 
             "Speed": 45
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 10,
 	"name":"Caterpie",
 	"model":"CaterpieRenderer",
@@ -1054,9 +1054,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 25, 
             "Speed": 30
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 11,
 	"name":"Metapod",
 	"model":"MetapodRenderer",
@@ -1087,9 +1087,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 80, 
             "Speed": 70
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 12,
 	"name":"Butterfree",
 	"model":"ButterfreeRenderer",
@@ -1177,9 +1177,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 20, 
             "Speed": 50
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 13,
 	"name":"Weedle",
 	"model":"WeedleRenderer",
@@ -1209,9 +1209,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 25, 
             "Speed": 35
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 14,
 	"name":"Kakuna",
 	"model":"KakunaRenderer",
@@ -1242,9 +1242,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 80, 
             "Speed": 75
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 15,
 	"name":"Beedrill",
 	"model":"BeedrillRenderer",
@@ -1334,9 +1334,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 35, 
             "Speed": 56
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 16,
 	"name":"Pidgey",
 	"model":"PidgeyRenderer",
@@ -1420,9 +1420,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 50, 
             "Speed": 71
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 17,
 	"name":"Pidgeotto",
 	"model":"PidgeottoRenderer",
@@ -1508,9 +1508,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 70, 
             "Speed": 101
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 18,
 	"name":"Pidgeot",
 	"model":"PidgeotRenderer",
@@ -1601,9 +1601,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 35, 
             "Speed": 72
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 19,
 	"name":"Rattata",
 	"model":"RattataRenderer",
@@ -1631,9 +1631,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 70, 
             "Speed": 97
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 21,
 	"name":"Spearow",
 	"model":"SpearowRenderer",
@@ -1721,9 +1721,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 61, 
             "Speed": 100
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 25,
 	"name":"Pikachu",
 	"model":"PikachuRenderer",
@@ -1827,9 +1827,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 80, 
             "Speed": 110
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 26,
 	"name":"Raichu",
 	"model":"RaichuRenderer",
@@ -1925,9 +1925,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 30, 
             "Speed": 40
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 29,
 	"name":"NidoranF",
 	"model":"NidoranFRenderer",
@@ -2022,9 +2022,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 55, 
             "Speed": 56
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 30,
 	"name":"Nidorina",
 	"model":"NidorinaRenderer",
@@ -2119,9 +2119,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 85, 
             "Speed": 76
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 32,
 	"name":"NidoranM",
 	"model":"NidoranMRenderer",
@@ -2216,9 +2216,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 55, 
             "Speed": 65
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 33,
 	"name":"Nidorino",
 	"model":"NidorinoRenderer",
@@ -2313,9 +2313,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 75, 
             "Speed": 85
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 41,
 	"name":"Zubat",
 	"model":"ZubatRenderer",
@@ -2413,9 +2413,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 75, 
             "Speed": 90
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 42,
 	"name":"Golbat",
 	"model":"GolbatRenderer",
@@ -2518,9 +2518,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 65, 
             "Speed": 30
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 50,
 	"name":"Diglett",
 	"model":"DiglettRenderer",
@@ -2611,9 +2611,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 70, 
             "Speed": 120
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 54,
 	"name":"Psyduck",
 	"model":"PsyduckRenderer",
@@ -2725,9 +2725,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 80, 
             "Speed": 85
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 56,
 	"name":"Mankey",
 	"model":"MankeyRenderer",
@@ -2845,9 +2845,9 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 70, 
             "Speed": 95
         }
-	},
+	],
 	
-	{
+	[
 	"national_id": 58,
 	"name":"Growlithe",
 	"model":"GrowlitheRenderer",
@@ -2944,7 +2944,7 @@ ______     _       ______           _     _______ _____
             "Sp.Def": 80, 
             "Speed": 95
         }
-	}
+	]
 	
 	
 ]
