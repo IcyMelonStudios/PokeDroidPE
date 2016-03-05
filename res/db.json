@@ -1,16 +1,28 @@
+/*
+______     _       ______           _     _______ _____ 
+| ___ \   | |      |  _  \         (_)   | | ___ \  ___|
+| |_/ /__ | | _____| | | |_ __ ___  _  __| | |_/ / |__  
+|  __/ _ \| |/ / _ \ | | | '__/ _ \| |/ _` |  __/|  __| 
+| | | (_) |   <  __/ |/ /| | | (_) | | (_| | |   | |___ 
+\_|  \___/|_|\_\___|___/ |_|  \___/|_|\__,_\_|   \____/ 
+                                                        
+ 
+(c )PokeDroid PE - 2016
+*/
 {
 "pokemon":[
     {
-	"name":"",
-	"model":"",
-	"texture":"",
-	"desc":"",
+	"national_id": 1;//National Dex ID
+	"name":"Bulbasaur",
+	"model":"BulbasaurRenderer",//Name of the model variable
+	"texture":"Bulbasaur.png",
+	"desc":"A strange seed was planted on its back at birth. The plant sprouts and grows with this Pokemon.",
 	"moves":[0,0,0,0],
-	"spawn_rate":"",
-	"catch_rate":"",
-	"icon":"",
-	"sound":"",
-	"evolution":"",
+	"spawn_rate": 7,
+	"catch_rate": 6,
+	"icon":"001.png",
+	"sound":"pokemon/bulbasaur.wav",
+	"evolution":2,
 	"types":[],
 	"base": {
         "Attack": 100, 
@@ -20,6 +32,6 @@
         "Sp.Def": 100, 
         "Speed": 100
         }
-	}
+	}//, (Add a comma between each Pokemon object)
 ]
 }

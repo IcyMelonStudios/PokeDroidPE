@@ -1509,6 +1509,7 @@ pokemonSounds.push(sound);
 
 var Pokemon = function(id){
 	this.id = id;
+	this.nId = 0;
 	this.name;
 	this.model;
 	this.texture;
@@ -1538,6 +1539,7 @@ var Pokemon = function(id){
 		var id = pkmn.id;
 		var obj = JSON.parse(loadTextFile(path+"res/db.json"));
 		pkmn.name = obj.pokemon[id].name;
+		pkmn.nId = obj.pokemon[id].national_id;
 		pkmn.model = eval(obj.pokemon[id].model);
 		pkmn.texture = obj.pokemon[id].texture;
 		pkmn.desc = obj.pokemon[id].desc;
