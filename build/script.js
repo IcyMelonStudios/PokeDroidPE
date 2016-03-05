@@ -1585,7 +1585,7 @@ function getPokemon(id){
 
 function loadSave(){
 	var filePath = android.os.Environment.getExternalStorageDirectory().getPath()+"/games/com.mojang/minecraftworlds/"+Level.getWorldDir()+"/";	
-	var file = = new java.io.File(filePath, "pokedroid.json");
+	var file = new java.io.File(filePath, "pokedroid.json");
 	if(!file.exists()){
 		file.mkdirs;
 		file.createNewFile();
