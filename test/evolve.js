@@ -9,7 +9,7 @@ while(pokemonLevel == 18) { //is evolve level 18? Lol
 ModPE.addTipMessage("§fYour pokemon §4" +pokemonEntity.getNameTag()+ "§f is Evolving!");
 timerr = true;
 
-if(timerr == true){
+while(timerr == true){
 timer--;
 }
 
@@ -34,7 +34,5 @@ timer = 100;
 clientMessage("§fcongratulations! Your pokemon §4" +pokemonEntity.getNameTag()+ "has Evolved!");
 }
 
-
 }
-
 }
