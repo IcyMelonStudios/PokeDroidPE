@@ -13,7 +13,11 @@ var s = txt.responseText;
 
 //document.getElementById("body")[0].innerHTML = txt.responseText;
 //console.log(s);
-console.log((JSON.parse(s)).pokemon[0].name);
+var obj = JSON.parse(s);
+console.log(obj.pokemon[0].name);
+for(var i in obj.pokemon){
+	document.getElementById("content").innerHTML+= obj.pokemon[i].national_id+", "+obj.pokemon[i].name+", "+obj.pokemon[i].model+", "+obj.pokemon[i].texture+", "+obj.pokemon[i].desc+"<br>";
+}
 /*var obj = JSON.parse(txt.responseText);
 
 var pokemonArr = obj.pokemon;
@@ -69,5 +73,8 @@ function loadPokemon(pkmn){
 	return pkmn;
 }
 </script>
+<p id="content">
+
+</p>
 </body>
 </html>
