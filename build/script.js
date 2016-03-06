@@ -73,7 +73,7 @@ var pokemonSpawnRates = [0];
 var pokemonCatchRates = [0];
 var pokemonIcons = [emptyDrawable];
 var pokemonSounds = ["Empty"];
-var rPokemon = [];
+
 
 var pokeballStrength = []; pokeballStrength[716] = 0; pokeballStrength[717] = 5; pokeballStrength[718] = 10; pokeballStrength[719] = 100;
 var pokeballTextures = []; pokeballTextures[716] = "pokeballs/pokeball-normal.png"; pokeballTextures[717] = "pokeballs/pokeball-great.png"; pokeballTextures[718] = "pokeballs/pokeball-ultra.png"; pokeballTextures[719] = "pokeballs/pokeball-master.png"; 
@@ -127,7 +127,7 @@ var pokeLvl1 = 0, pokeLvl2 = 0, pokeLvl3 = 0, pokeLvl4 = 0, pokeLvl5 = 0, pokeLv
 var pokeMaxHP = [0, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 49, 52, 55, 58, 61, 64, 67, 70, 73, 76, 79, 82, 85, 88, 92, 96, 100, 104, 108, 112, 116, 120, 124, 128, 132, 136, 140, 144, 148, 152, 156, 160, 164, 168, 172, 176, 180, 184, 188, 192, 196, 200, 204, 208, 212, 216, 220, 224, 228, 232, 236, 240];
 var pokeMaxExp = [0, 1, 8, 27, 64, 125, 216, 343, 512, 729, 1000, 1331, 1728, 2197, 2744, 3375, 4096, 4913, 5832, 6859, 8000, 9261, 10648, 12167, 13824, 15625, 17576, 19683, 21952, 24389, 27000, 29791, 32768, 35937, 39304, 42875, 46656, 50653, 54872, 59319, 64000, 68921, 74088, 79507, 85184, 91125, 97336, 103823, 110592, 117649, 125000, 132651, 140608, 148877, 157464, 166375, 175616, 185193, 195112, 205379, 216000, 226981, 238328, 250047, 262144, 274625, 287496, 300763, 314432, 328509, 343000];
 
-
+var PokemonDatabase = null;
 
 var MediaPlayer = android.media.MediaPlayer();
 
@@ -528,7 +528,7 @@ Block.setDestroyTime(192,2);
 */
 // code is below
 
-
+loadAllPokemon();
 
 
 
@@ -587,13 +587,13 @@ registerPokemon("Sudowoodo", SudowoodoRenderer, "Sudowoodo.png", "Although it al
 
 
 
-lengthOfSpawnRates = rPokemon.spawnR.length - 1;
+lengthOfSpawnRates = PokemonDatabase.pokemon.length - 1;
 calculateSpawningPossibility();
 
 
 loadResources();
 
-loadAllPokemon();
+
 showPokeInv();
 showSaveBtn();
 
@@ -739,7 +739,7 @@ function modTick()
 
 
     if(currEntity!=null){
-	playSound(rPokemon[getIdFromNameTag(currEntity)].sound);
+	playSound(PokemonDatabase.pokemon[getIdFromNameTag(currEntity)].sound);
 	}
 	
 	
@@ -987,16 +987,16 @@ else if(!recentlyCatched)
 clientMessage("     Oh, no! The Pokemon broke free!");
 
 		if(ID_holder == 17 || ID_holder == 21 || ID_holder == 33 || ID_holder == 34 || ID_holder == 48)
-		var sPokemon = Level.spawnMob(AXIS_holder[0], AXIS_holder[1], AXIS_holder[2], 19, "pokemon-textures/"+rPokemon[ID_holder].texture);
+		var sPokemon = Level.spawnMob(AXIS_holder[0], AXIS_holder[1], AXIS_holder[2], 19, "pokemon-textures/"+PokemonDatabase.pokemon[ID_holder].texture);
 		else
-		var sPokemon = Level.spawnMob(AXIS_holder[0], AXIS_holder[1], AXIS_holder[2], 11, "pokemon-textures/"+rPokemon[ID_holder].texture);
+		var sPokemon = Level.spawnMob(AXIS_holder[0], AXIS_holder[1], AXIS_holder[2], 11, "pokemon-textures/"+PokemonDatabase.pokemon[ID_holder].texture);
 		Entity.setHealth(sPokemon, 9999999999999);
-		Entity.setRenderer(sPokemon, rPokemon[ID_holder].model.renderType);
-		Entity.setNameTag(sPokemon, "Wild " + rPokemon[ID_holder].name + " Lv." + LVL_holder);
+		Entity.setRenderer(sPokemon, eval(PokemonDatabase.pokemon[ID_holder].model).renderType);
+		Entity.setNameTag(sPokemon, "Wild " + PokemonDatabase.pokemon[ID_holder].name + " Lv." + LVL_holder);
 		Entity.setCollisionSize(sPokemon,1,2);
 		if(ID_holder == 33 || ID_holder == 34)
 		{
-			Entity.setNameTag(sPokemon, "Wild " + rPokemon[ID_holder].name + " Lv. 50");
+			Entity.setNameTag(sPokemon, "Wild " + PokemonDatabase.pokemon[ID_holder].name + " Lv. 50");
 		}
 		
 ID_holder = 0;
@@ -1340,7 +1340,7 @@ function attackHook(attacker, victim)
 {
 	if(entityIsPokemon(victim, true) && Player.getCarriedItem() == 729)
 	{
-	clientMessage("   " + rPokemon[getIdFromNameTag(victim)].name + " - " + rPokemon[getIdFromNameTag(victim)].desc);
+	clientMessage("   " + PokemonDatabase.pokemon[getIdFromNameTag(victim)].name + " - " + PokemonDatabase.pokemon[getIdFromNameTag(victim)].desc);
 	}
 		
 	if(entityIsPokemon(victim, true) && pokemonIsWild(victim) && Caught == 100)
@@ -1526,33 +1526,13 @@ pokemonSounds.push(sound);
 }
 
 
-var Pokemon = function(id){
-	this.id = id;
-	this.nId = 0;
-	this.name;
-	this.model;
-	this.texture;
-	this.desc;
-	this.moves = [];
-	this.spawnR;
-	this.catchR;
-	this.icon;
-	this.sound;
-	this.evolution;
-	this.types = [];
-	this.base;
-	
-};
 
 
 
 	
 function loadAllPokemon(){
 	var obj = JSON.parse(loadTextFile(path+"/res/db.json"));
-	var pokemonArr = obj.pokemon;
-	for(var i in pokemonArr){
-		rPokemon.push(loadPokemon(new Pokemon(i)));
-	}
+	PokemonDatabase = obj;
 }
 function loadPokemon(pkmn){
 	var id = pkmn.id;
@@ -1574,8 +1554,8 @@ function loadPokemon(pkmn){
 	return pkmn;
 }
 function getPokemon(id){
-	for(var i in rPokemon){
-		if(i.nId==id){
+	for(var i in PokemonDatabase.pokemon){
+		if(i.national_id==id){
 			return i;
 		}
 	}
@@ -1662,8 +1642,8 @@ playSound("pokeball/pokeball_grow.mp3");
 
 
 function getPokemonIdByTexture(tex){
-for(var i=0;i<rPokemon.length;i++){
-if(rPokemon[i].texture==tex){
+for(var i=0;i<PokemonDatabase.pokemon.length;i++){
+if(PokemonDatabase.pokemon[i].texture==tex){
 break;
 return true;
 }
@@ -1715,7 +1695,7 @@ function calculateSpawningPossibility()
 {
     for(var numberOfArrayNumber = 1; numberOfArrayNumber <= lengthOfSpawnRates; numberOfArrayNumber++)
     {
-        for(var valueOfSpawnRate = 1; valueOfSpawnRate <= rPokemon[numberOfArrayNumber].spawnR; valueOfSpawnRate++)
+        for(var valueOfSpawnRate = 1; valueOfSpawnRate <= PokemonDatabase.pokemon[numberOfArrayNumber].spawnR; valueOfSpawnRate++)
         {
             spawnRatesForRandom.push(numberOfArrayNumber);
         }
@@ -1728,7 +1708,7 @@ function calculateSpawningPossibility()
 function calculateCatchRate(id, hp, item) 
 {
 	var catchRatesForRandom = [];
-	for(var i = 1; i <= Math.round(rPokemon[id].catchR * 30 / hp + item); i++)
+	for(var i = 1; i <= Math.round(PokemonDatabase.pokemon[id].catchR * 30 / hp + item); i++)
 	{
 		catchRatesForRandom.push(1);
 	}
@@ -1772,9 +1752,9 @@ function getIdFromText(textLine)
 var text = textLine;
 if(text!=null && text!=""){
 var id = text.split(' ');
-for(var i = 0; i <= rPokemon.length; i++)
+for(var i = 0; i <= PokemonDatabase.pokemon.length; i++)
 {
-    if(rPokemon[i].name == id[1])
+    if(PokemonDatabase.pokemon[i].name == id[1])
 	{
 	return i;
 	break;
@@ -1791,9 +1771,9 @@ function getIdFromNameTag(ent)
 var text = Entity.getNameTag(ent);
 if(text!=null && text!=""){
 var id = text.split(' ');
-for(var i = 0; i <= rPokemon.length; i++)
+for(var i = 0; i <= PokemonDatabase.pokemon.length; i++)
 {
-    if(rPokemon[i].name == id[1])
+    if(PokemonDatabase.pokemon[i].name == id[1])
 	{
 	return i;
 	break;
@@ -1805,10 +1785,10 @@ for(var i = 0; i <= rPokemon.length; i++)
 
 function sendOutPokemon(id, lvl)
 {
-pokemonHolder = Level.spawnMob(getPlayerX(), getPlayerY() + 1, getPlayerZ(), 11, "pokemon-textures/" + rPokemon[id].texture);
+pokemonHolder = Level.spawnMob(getPlayerX(), getPlayerY() + 1, getPlayerZ(), 11, "pokemon-textures/" + PokemonDatabase.pokemon[id].texture);
 Entity.setHealth(pokemonHolder, 9999999999999);
-Entity.setRenderer(pokemonHolder, rPokemon[id].model.renderType);
-Entity.setNameTag(pokemonHolder, rPokemon[id].name + " Lv."+lvl);
+Entity.setRenderer(pokemonHolder, eval(PokemonDatabase.pokemon[id].model).renderType);
+Entity.setNameTag(pokemonHolder, PokemonDatabase.pokemon[id].name + " Lv."+lvl);
 Entity.setCollisionSize(pokemonHolder, 1, 2);
 setVelX(pokemonHolder, 0.72 * Math.cos((getYaw()+90)*(Math.PI/180))); 
 setVelZ(pokemonHolder, 0.72 * Math.sin((getYaw()+90)*(Math.PI/180)));
@@ -1909,17 +1889,17 @@ function spawnPokemon(id,x,y,z){
 	for(var pokemonsToSpawn = 1; pokemonsToSpawn <= countSpawnPokemon[getRandom(0, 4)]; pokemonsToSpawn++)
 		{
 		if(id == 17 || id == 21 || id == 33 || id == 34 || id == 48)
-		var sPokemon = Level.spawnMob(x + pokemonsToSpawn - 1, y, z, 19, "pokemon-textures/"+rPokemon[id].texture);
+		var sPokemon = Level.spawnMob(x + pokemonsToSpawn - 1, y, z, 19, "pokemon-textures/"+PokemonDatabase.pokemon[id].texture);
 		else
-		var sPokemon = Level.spawnMob(x + pokemonsToSpawn - 1, y, z, 11, "pokemon-textures/"+rPokemon[id].texture);
+		var sPokemon = Level.spawnMob(x + pokemonsToSpawn - 1, y, z, 11, "pokemon-textures/"+PokemonDatabase.pokemon[id].texture);
 		Entity.setHealth(sPokemon, 9999999999999);
-		Entity.setRenderer(sPokemon, rPokemon[id].model.renderType);
+		Entity.setRenderer(sPokemon, eval(PokemonDatabase.pokemon[id].model).renderType);
 		rLevel = Math.floor((Math.random()*70)+1);
-		Entity.setNameTag(sPokemon, "Wild " + rPokemon[id].name + " Lv."+rLevel);
+		Entity.setNameTag(sPokemon, "Wild " + PokemonDatabase.pokemon[id].name + " Lv."+rLevel);
 		Entity.setCollisionSize(sPokemon,1,2);
 		if(id == 33 || id == 34)
 		{
-			Entity.setNameTag(sPokemon, "Wild " + rPokemon[id].name + " Lv. 50");
+			Entity.setNameTag(sPokemon, "Wild " + PokemonDatabase.pokemon[id].name + " Lv. 50");
 			break;
 		}
 		}
@@ -2771,7 +2751,7 @@ invBtn1Window.setWidth(slotDimens);
 invBtn1Window.setHeight(slotDimens);
 invBtn1Button.setWidth(slotDimens);
 invBtn1Button.setHeight(slotDimens);
-invBtn1Button.setBackgroundDrawable(rPokemon[pokeId1].icon);
+invBtn1Button.setBackgroundDrawable(loadDrawable(path+"res/icons/"+PokemonDatabase.pokemon[pokeId1].icon));
 invBtn1Window.showAtLocation(activity.getWindow().getDecorView(), android.view.Gravity.LEFT | android.view.Gravity.CENTER_VERTICAL, 0, 0-(slotDimens*3)+(slotDimens/2)-10);
 }catch(problem){ 
 print("Button could not be displayed: " + problem);
@@ -2806,7 +2786,7 @@ invBtn2Window.setWidth(slotDimens);
 invBtn2Window.setHeight(slotDimens);
 invBtn2Button.setWidth(slotDimens);
 invBtn2Button.setHeight(slotDimens);
-invBtn2Button.setBackgroundDrawable(rPokemon[pokeId2].icon);
+invBtn2Button.setBackgroundDrawable(loadDrawable(path+"res/icons/"+PokemonDatabase.pokemon[pokeId2].icon));
 invBtn2Window.showAtLocation(activity.getWindow().getDecorView(), android.view.Gravity.LEFT | android.view.Gravity.CENTER_VERTICAL, 0, 0-(slotDimens*2)+(slotDimens/2)-10);
 }catch(problem){ 
 print("Button could not be displayed: " + problem);
@@ -2841,7 +2821,7 @@ invBtn3Window.setWidth(slotDimens);
 invBtn3Window.setHeight(slotDimens);
 invBtn3Button.setWidth(slotDimens);
 invBtn3Button.setHeight(slotDimens);
-invBtn3Button.setBackgroundDrawable(rPokemon[pokeId3].icon);
+invBtn3Button.setBackgroundDrawable(loadDrawable(path+"res/icons/"+PokemonDatabase.pokemon[pokeId3].icon));
 invBtn3Window.showAtLocation(activity.getWindow().getDecorView(), android.view.Gravity.LEFT | android.view.Gravity.CENTER_VERTICAL, 0, 0-(slotDimens*1)+(slotDimens/2)-10);
 }catch(problem){ 
 print("Button could not be displayed: " + problem);
@@ -2876,7 +2856,7 @@ invBtn4Window.setWidth(slotDimens);
 invBtn4Window.setHeight(slotDimens);
 invBtn4Button.setWidth(slotDimens);
 invBtn4Button.setHeight(slotDimens);
-invBtn4Button.setBackgroundDrawable(rPokemon[pokeId4].icon);
+invBtn4Button.setBackgroundDrawable(loadDrawable(path+"res/icons/"+PokemonDatabase.pokemon[pokeId4].icon));
 invBtn4Window.showAtLocation(activity.getWindow().getDecorView(), android.view.Gravity.LEFT | android.view.Gravity.CENTER_VERTICAL, 0, 0+(slotDimens*0)+(slotDimens/2)-10);
 }catch(problem){ 
 print("Button could not be displayed: " + problem);
@@ -2911,7 +2891,7 @@ invBtn5Window.setWidth(slotDimens);
 invBtn5Window.setHeight(slotDimens);
 invBtn5Button.setWidth(slotDimens);
 invBtn5Button.setHeight(slotDimens);
-invBtn5Button.setBackgroundDrawable(rPokemon[pokeId5].icon);
+invBtn5Button.setBackgroundDrawable(loadDrawable(path+"res/icons/"+PokemonDatabase.pokemon[pokeId5].icon));
 invBtn5Window.showAtLocation(activity.getWindow().getDecorView(), android.view.Gravity.LEFT | android.view.Gravity.CENTER_VERTICAL, 0, 0+(slotDimens*1)+(slotDimens/2)-10);
 }catch(problem){ 
 print("Button could not be displayed: " + problem);
@@ -2946,7 +2926,7 @@ invBtn6Window.setWidth(slotDimens);
 invBtn6Window.setHeight(slotDimens);
 invBtn6Button.setWidth(slotDimens);
 invBtn6Button.setHeight(slotDimens);
-invBtn6Button.setBackgroundDrawable(rPokemon[pokeId6].icon);
+invBtn6Button.setBackgroundDrawable(loadDrawable(path+"res/icons/"+PokemonDatabase.pokemon[pokeId6].icon));
 invBtn6Window.showAtLocation(activity.getWindow().getDecorView(), android.view.Gravity.LEFT | android.view.Gravity.CENTER_VERTICAL, 0, 0+(slotDimens*2)+(slotDimens/2)-10);
 }catch(problem){ 
 print("Button could not be displayed: " + problem);
