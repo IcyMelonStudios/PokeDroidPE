@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>PokeDroid Script Web Test</title>
+</head>
+<body id="body" onload="callit()">
+<script>
+function callit(){
+var url = "https://raw.githubusercontent.com/IcyMelonStudios/PokeDroidPE/master/res/db.json";
+var txt = new XMLHttpRequest();
+txt.open("GET",url,false);
+txt.send();
+var s = txt.responseText;
+
+//document.getElementById("body")[0].innerHTML = txt.responseText;
+//console.log(s);
+console.log((JSON.parse(s)).pokemon[0].name);
+/*var obj = JSON.parse(txt.responseText);
+
+var pokemonArr = obj.pokemon;
+for(var i in pokemonArr){
+	rPokemon.push(loadPokemon(new Pokemon(i)));
+}	
+for(var p in rPokemon){
+	document.write(p.name);
+}*/
+}
+function getPokemon(id){
+	for(var i in rPokemon){
+		if(i.nId==id){
+			return i;
+		}
+	}
+	return null;
+}
+
+var Pokemon = function(id){
+	this.id = id;
+	this.nId = 0;
+	this.name;
+	this.model;
+	this.texture;
+	this.desc;
+	this.moves = [];
+	this.spawnR;
+	this.catchR;
+	this.icon;
+	this.sound;
+	this.evolution;
+	this.types = [];
+	this.base;
+	
+};
+function loadPokemon(pkmn){
+	var id = pkmn.id;
+	pkmn.name = obj.pokemon[id].name;
+	pkmn.nId = obj.pokemon[id].national_id;
+	pkmn.model = eval(obj.pokemon[id].model);
+	pkmn.texture = obj.pokemon[id].texture;
+	pkmn.desc = obj.pokemon[id].desc;
+	pkmn.spawnR = obj.pokemon[id].spawn_rate;
+	pkmn.catchR = obj.pokemon[id].catch_rate;
+	pkmn.icon = loadDrawable(path+"res/icons/"+obj.pokemon[id].icon);
+	pkmn.sound = obj.pokemon[id].sound;
+	pkmn.evolution = obj.pokemon[id].evolution;
+	pkmn.skills = obj.pokemon[id].skills;
+	pkmn.types = obj.pokemon[id].types;
+	pkmn.base = obj.pokemon[id].base;
+	
+	return pkmn;
+}
+</script>
+</body>
+</html>

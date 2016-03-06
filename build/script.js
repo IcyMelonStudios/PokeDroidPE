@@ -73,7 +73,7 @@ var pokemonSpawnRates = [0];
 var pokemonCatchRates = [0];
 var pokemonIcons = [emptyDrawable];
 var pokemonSounds = ["Empty"];
-var rPokemon = [null];
+var rPokemon = [];
 
 var pokeballStrength = []; pokeballStrength[716] = 0; pokeballStrength[717] = 5; pokeballStrength[718] = 10; pokeballStrength[719] = 100;
 var pokeballTextures = []; pokeballTextures[716] = "pokeballs/pokeball-normal.png"; pokeballTextures[717] = "pokeballs/pokeball-great.png"; pokeballTextures[718] = "pokeballs/pokeball-ultra.png"; pokeballTextures[719] = "pokeballs/pokeball-master.png"; 
