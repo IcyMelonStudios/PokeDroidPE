@@ -1,8 +1,6 @@
 // This mod belongs to IcyMelon Studios.
 // You can't use or copy this code or textures without our permission.
 
-
-
 /*
 *
 *
@@ -15,7 +13,7 @@
 
 
 
-
+const MOD_NAME = "POKEDROIDPE";
 const VERSION = "v1_0_0";
 const BUILD = "DEVELOPMENT";
 
@@ -117,10 +115,12 @@ var AXIS_holder = [0, 0, 0];
 
 var starterSelected = false;
 var pokemonSelected = 0;
-var pokeId1 = 0, pokeId2 = 0, pokeId3 = 0, pokeId4 = 0, pokeId5 = 0, pokeId6 = 0;
+var pokeId1 = -1, pokeId2 = -1, pokeId3 = -1, pokeId4 = -1, pokeId5 = -1, pokeId6 = -1;
 var pokeHP1 = 0, pokeHP2 = 0, pokeHP3 = 0, pokeHP4 = 0, pokeHP5 = 0, pokeHP6 = 0;
 var pokeExp1 = 0, pokeExp2 = 0, pokeExp3 = 0, pokeExp4 = 0, pokeExp5 = 0, pokeExp6 = 0;
 var pokeLvl1 = 0, pokeLvl2 = 0, pokeLvl3 = 0, pokeLvl4 = 0, pokeLvl5 = 0, pokeLvl6 = 0;
+
+var DB_JSON = null;
 
 //variables that need saving
 
@@ -535,6 +535,8 @@ loadAllPokemon();
 
 
 function newLevel(){
+
+
 registerPokemon("Weepinbell", WeepinbellRenderer, "Weepinbell.png", "The leafy parts act as cutters for slashing foes. It spits a fluid that dissolves everything.", 75, 77, 79, 33, 19, 16, "070.png","pokemon/weepinbell.wav");
 registerPokemon("Squirtle", SquirtleRenderer, "Squirtle.png", "It shelters itself in its shell, then strikes back with spouts of water at every opportunity.", 10, 55, 145, 56, 7, 6, "007.png","pokemon/squirtle.wav");
 registerPokemon("Krabby", KrabbyRenderer, "Krabby.png", "If it senses danger approaching, it cloaks itself with bubbles from its mouth so it will look bigger.", 145, 43, 55, 61, 35, 29, "098.png","pokemon/krabby.wav");
@@ -739,7 +741,10 @@ function modTick()
 
 
     if(currEntity!=null){
-	playSound(PokemonDatabase.pokemon[getIdFromNameTag(currEntity)].sound);
+	var id = Entity.getExtraData(currEntity,"icymelon.pokedroid.id");
+	if(id!=null){
+		playSound(PokemonDatabase.pokemon[id].sound);
+	}
 	}
 	
 	
@@ -777,7 +782,7 @@ function modTick()
         xSpawn = getPlayerX() + getRandom(-100, 100);
         zSpawn = getPlayerZ() + getRandom(-100, 100);
         ySpawn = searchForGround(xSpawn, zSpawn);
-        spawnPokemon(spawnRatesForRandom[Math.floor((Math.random()*spawnRatesForRandom.length))], xSpawn, ySpawn, zSpawn);
+        spawnPokemon(spawnRatesForRandom[randomSpawnID()], xSpawn, ySpawn, zSpawn);
     }
 }
 
@@ -916,14 +921,14 @@ function modTick()
         		xSpawn = getPlayerX() + getRandom(-50, 100);
         		zSpawn = getPlayerZ() + getRandom(-100, 100);
         		ySpawn = searchForGround(xSpawn, zSpawn);
-        		spawnPokemon(spawnRatesForRandom[Math.floor((Math.random()*spawnRatesForRandom.length))], xSpawn, ySpawn, zSpawn);
+        		spawnPokemon(spawnRatesForRandom[randomSpawnID()], xSpawn, ySpawn, zSpawn);
     		}
     		if(xSideToSpawn < 0)
     		{
     			xSpawn = getPlayerX() + getRandom(-100, 50);
         		zSpawn = getPlayerZ() + getRandom(-100, 100);
         		ySpawn = searchForGround(xSpawn, zSpawn);
-        		spawnPokemon(spawnRatesForRandom[Math.floor((Math.random()*spawnRatesForRandom.length))], xSpawn, ySpawn, zSpawn);
+        		spawnPokemon(spawnRatesForRandom[randomSpawnID()], xSpawn, ySpawn, zSpawn);
     		}
     	}
     	if(dominatingSide == 1)
@@ -933,14 +938,14 @@ function modTick()
         		xSpawn = getPlayerX() + getRandom(-100, 100);
         		zSpawn = getPlayerZ() + getRandom(-50, 100);
         		ySpawn = searchForGround(xSpawn, zSpawn);
-        		spawnPokemon(spawnRatesForRandom[Math.floor((Math.random()*spawnRatesForRandom.length))], xSpawn, ySpawn, zSpawn);
+        		spawnPokemon(spawnRatesForRandom[grandomSpawnID()], xSpawn, ySpawn, zSpawn);
     		}
     		if(zSideToSpawn < 0)
     		{
        			xSpawn = getPlayerX() + getRandom(-100, 100);
        			zSpawn = getPlayerZ() + getRandom(-100, 50);
         		ySpawn = searchForGround(xSpawn, zSpawn);
-        		spawnPokemon(spawnRatesForRandom[Math.floor((Math.random()*spawnRatesForRandom.length))], xSpawn, ySpawn, zSpawn);
+        		spawnPokemon(spawnRatesForRandom[randomSpawnID()], xSpawn, ySpawn, zSpawn);
     		}}
     	}
     	spawnRadiusX.push(getPlayerX());
@@ -991,7 +996,8 @@ clientMessage("     Oh, no! The Pokemon broke free!");
 		else
 		var sPokemon = Level.spawnMob(AXIS_holder[0], AXIS_holder[1], AXIS_holder[2], 11, "pokemon-textures/"+PokemonDatabase.pokemon[ID_holder].texture);
 		Entity.setHealth(sPokemon, 9999999999999);
-		Entity.setRenderer(sPokemon, eval(PokemonDatabase.pokemon[ID_holder].model).renderType);
+		Entity.setExtraData(sPokemon,"icymelon.pokedroid.id",ID_HOLDER);
+		Entity.setRenderType(sPokemon, eval(PokemonDatabase.pokemon[ID_holder].model).renderType);
 		Entity.setNameTag(sPokemon, "Wild " + PokemonDatabase.pokemon[ID_holder].name + " Lv." + LVL_holder);
 		Entity.setCollisionSize(sPokemon,1,2);
 		if(ID_holder == 33 || ID_holder == 34)
@@ -1527,16 +1533,36 @@ pokemonSounds.push(sound);
 
 
 
+function getRandomInt(min, max) {
+	var r = Math.floor(Math.random() * (max - min)) + min;
+	if(r>PokemonDatabase.pokemon.length || r<0){
+		r = 0;
+	}
+	return r;
+}
 
-
+function randomSpawnID(){
+	var r = Math.floor(Math.random() * pokemonSpawnRates.length-1);
+	return r;
+}
 	
 function loadAllPokemon(){
-	var obj = JSON.parse(loadTextFile(path+"/res/db.json"));
-	PokemonDatabase = obj;
+	DB_JSON = readFile(path+"/res/db.json");
+	if(DB_JSON==null){
+		print("HELP!!")
+	}else{
+		print("Loading Pokemon Database.")
+		var obj = JSON.parse(DB_JSON);
+		PokemonDatabase = obj;
+		
+		print("Loaded "+PokemonDatabase.pokemon.length+" Pokemon.");
+		
+		
+	}
 }
 function loadPokemon(pkmn){
 	var id = pkmn.id;
-	var obj = JSON.parse(loadTextFile(path+"/res/db.json"));
+	var obj = JSON.parse(readFile(path+"/res/db.json"));
 	pkmn.name = obj.pokemon[id].name;
 	pkmn.nId = obj.pokemon[id].national_id;
 	pkmn.model = eval(obj.pokemon[id].model);
@@ -1642,7 +1668,7 @@ playSound("pokeball/pokeball_grow.mp3");
 
 
 function getPokemonIdByTexture(tex){
-for(var i=0;i<PokemonDatabase.pokemon.length;i++){
+for(var i=0;i<PokemonDatabase.pokemon.length-1;i++){
 if(PokemonDatabase.pokemon[i].texture==tex){
 break;
 return true;
@@ -1693,13 +1719,19 @@ function pokemonIsWild(ent)
 
 function calculateSpawningPossibility()
 {
-    for(var numberOfArrayNumber = 1; numberOfArrayNumber <= lengthOfSpawnRates; numberOfArrayNumber++)
+    for(var numberOfArrayNumber = 0; numberOfArrayNumber <= PokemonDatabase.pokemon.length-1; numberOfArrayNumber++)
     {
-        for(var valueOfSpawnRate = 1; valueOfSpawnRate <= PokemonDatabase.pokemon[numberOfArrayNumber].spawnR; valueOfSpawnRate++)
+        for(var valueOfSpawnRate = 1; valueOfSpawnRate <= PokemonDatabase.pokemon[numberOfArrayNumber].spawn_rate; valueOfSpawnRate++)
         {
             spawnRatesForRandom.push(numberOfArrayNumber);
         }
     }
+	var s = "[";
+	for(var i = 0; numberOfArrayNumber <= spawnRatesForRandom.length; i++){
+		s+=spawnRatesForRandom[i]+",";
+	}
+	s+="]";
+	clientMessage(s);
 }
 
 
@@ -1708,7 +1740,7 @@ function calculateSpawningPossibility()
 function calculateCatchRate(id, hp, item) 
 {
 	var catchRatesForRandom = [];
-	for(var i = 1; i <= Math.round(PokemonDatabase.pokemon[id].catchR * 30 / hp + item); i++)
+	for(var i = 1; i <= Math.round(PokemonDatabase.pokemon[id].catch_rate * 30 / hp + item); i++)
 	{
 		catchRatesForRandom.push(1);
 	}
@@ -1752,7 +1784,7 @@ function getIdFromText(textLine)
 var text = textLine;
 if(text!=null && text!=""){
 var id = text.split(' ');
-for(var i = 0; i <= PokemonDatabase.pokemon.length; i++)
+for(var i = 0; i <= PokemonDatabase.pokemon.length-1; i++)
 {
     if(PokemonDatabase.pokemon[i].name == id[1])
 	{
@@ -1771,7 +1803,7 @@ function getIdFromNameTag(ent)
 var text = Entity.getNameTag(ent);
 if(text!=null && text!=""){
 var id = text.split(' ');
-for(var i = 0; i <= PokemonDatabase.pokemon.length; i++)
+for(var i = 0; i <= PokemonDatabase.pokemon.length-1; i++)
 {
     if(PokemonDatabase.pokemon[i].name == id[1])
 	{
@@ -1787,8 +1819,9 @@ function sendOutPokemon(id, lvl)
 {
 pokemonHolder = Level.spawnMob(getPlayerX(), getPlayerY() + 1, getPlayerZ(), 11, "pokemon-textures/" + PokemonDatabase.pokemon[id].texture);
 Entity.setHealth(pokemonHolder, 9999999999999);
-Entity.setRenderer(pokemonHolder, eval(PokemonDatabase.pokemon[id].model).renderType);
+Entity.setRenderType(pokemonHolder, eval(PokemonDatabase.pokemon[id].model).renderType);
 Entity.setNameTag(pokemonHolder, PokemonDatabase.pokemon[id].name + " Lv."+lvl);
+Entity.setExtraData(pokemonHolder,"icymelon.pokedroid.id",id);
 Entity.setCollisionSize(pokemonHolder, 1, 2);
 setVelX(pokemonHolder, 0.72 * Math.cos((getYaw()+90)*(Math.PI/180))); 
 setVelZ(pokemonHolder, 0.72 * Math.sin((getYaw()+90)*(Math.PI/180)));
@@ -1812,7 +1845,7 @@ function catchPokemon(ent, item, hp)
 {
 	removeItem(item);
 	Pokeball = Level.spawnMob(Entity.getX(ent), Entity.getY(ent) + 2, Entity.getZ(ent), 11, pokeballTextures[item]);
-    Entity.setRenderer(Pokeball, PokeballRenderer.renderType);
+    Entity.setRenderType(Pokeball, PokeballRenderer.renderType);
 	if(calculateCatchRate(getIdFromNameTag(ent), hp, pokeballStrength[item]) == 1)
 	{
 		recentlyCatched = true;
@@ -1882,18 +1915,22 @@ function catchPokemon(ent, item, hp)
 
 
 function spawnPokemon(id,x,y,z){
+
+	//clientMessage("Spawning pokemon: "+id);
+	
 	//wont allow to spawn in water or lava
 	if(getTile(x, y-1, z) != 8 && getTile(x, y-1, z) != 9 && getTile(x, y-1, z) != 10 && getTile(x, y-1, z) != 11) 
 	{
 	//randomly calculates how many same type pokemons will spawn
 	for(var pokemonsToSpawn = 1; pokemonsToSpawn <= countSpawnPokemon[getRandom(0, 4)]; pokemonsToSpawn++)
 		{
-		if(id == 17 || id == 21 || id == 33 || id == 34 || id == 48)
+		/*if(id == 17 || id == 21 || id == 33 || id == 34 || id == 48)
 		var sPokemon = Level.spawnMob(x + pokemonsToSpawn - 1, y, z, 19, "pokemon-textures/"+PokemonDatabase.pokemon[id].texture);
-		else
+		else*/
 		var sPokemon = Level.spawnMob(x + pokemonsToSpawn - 1, y, z, 11, "pokemon-textures/"+PokemonDatabase.pokemon[id].texture);
 		Entity.setHealth(sPokemon, 9999999999999);
-		Entity.setRenderer(sPokemon, eval(PokemonDatabase.pokemon[id].model).renderType);
+		Entity.setExtraData(sPokemon,"icymelon.pokedroid.id",id);
+		Entity.setRenderType(sPokemon, eval(PokemonDatabase.pokemon[id].model).renderType);
 		rLevel = Math.floor((Math.random()*70)+1);
 		Entity.setNameTag(sPokemon, "Wild " + PokemonDatabase.pokemon[id].name + " Lv."+rLevel);
 		Entity.setCollisionSize(sPokemon,1,2);
@@ -2961,7 +2998,12 @@ clientMessage(err);
 });
 }
 
-
+function getPokeIcon(id){
+if(id<0 || id>= PokemonDatabase.pokemon.length){
+return emptyDrawable;
+}
+return loadDrawable(PokemonDatabase.pokemon[id].icon);
+}
 
 function showPokeBtn(){
 //Button
