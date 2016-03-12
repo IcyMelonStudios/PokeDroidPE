@@ -1647,10 +1647,11 @@ write.close();
 
 
 function readFile(p){
-try {
 var filelo = new java.io.File(p);
-var strin = new java.lang.StringBuilder();
-var fos = new java.io.FileInputStream(filelo);
+var txt = new java.lang.StringBuilder();
+try {
+
+/*var fos = new java.io.FileInputStream(filelo);
 var jk;
 var o;
 while((jk = fos.read()) != -1)
@@ -1659,9 +1660,21 @@ o = strin.toString();
     fos.close();
 	}
 	catch(err){return null}
-	return o;
-}
+	return o;*/
+ var br = new java.io.BufferedReader(new java.io.FileReader(p));
+    var line;
 
+    while ((line = br.readLine()) != null) {
+        txt.append(line);
+        txt.append('\n');
+    }
+    br.close();
+	
+}catch(err){
+	return null;
+}
+return txt;
+}
 
 function loadTextFile(name)
 {
