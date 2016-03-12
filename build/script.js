@@ -535,7 +535,12 @@ loadAllPokemon();
 
 
 function newLevel(){
-
+if(DB_JSON==null){
+	
+	print("Pokemon Database not loaded yet. Please wait.");
+	ModPE.leaveGame();
+	return;
+}
 
 registerPokemon("Weepinbell", WeepinbellRenderer, "Weepinbell.png", "The leafy parts act as cutters for slashing foes. It spits a fluid that dissolves everything.", 75, 77, 79, 33, 19, 16, "070.png","pokemon/weepinbell.wav");
 registerPokemon("Squirtle", SquirtleRenderer, "Squirtle.png", "It shelters itself in its shell, then strikes back with spouts of water at every opportunity.", 10, 55, 145, 56, 7, 6, "007.png","pokemon/squirtle.wav");
@@ -711,6 +716,14 @@ function leaveGame()
 
 function modTick() 
 {
+
+	if(DB_JSON==null){
+	
+	print("Pokemon Database not loaded yet. Please wait.");
+	ModPE.leaveGame();
+	return;
+}
+
     if(gameStarted == 0) 
     {
         if(getTile(getPlayerX(), getPlayerY() - 2, getPlayerZ()) != 0 || Player.isFlying())
@@ -1547,18 +1560,32 @@ function randomSpawnID(){
 }
 	
 function loadAllPokemon(){
-	DB_JSON = readFile(path+"/res/db.json");
-	if(DB_JSON==null){
-		print("HELP!!")
-	}else{
+//var activity = com.mojang.minecraftpe.MainActivity.currentMainActivity.get();
+
+var rb = new java.lang.Runnable( { run: function() {
+try {
 		print("Loading Pokemon Database.")
-		var obj = JSON.parse(DB_JSON);
-		PokemonDatabase = obj;
-		
-		print("Loaded "+PokemonDatabase.pokemon.length+" Pokemon.");
-		
-		
-	}
+		DB_JSON = readFile(path+"/res/db.json");
+		if(DB_JSON==null){
+			print("HELP!!")
+		}else{
+			
+			var obj = JSON.parse(DB_JSON);
+			PokemonDatabase = obj;
+			
+			print("Loaded "+PokemonDatabase.pokemon.length+" Pokemon.");
+		}
+}catch(problem){ 
+print("Error loading pokemon database: " + problem);
+}
+}});
+
+
+var thread = new java.lang.Thread(rb);
+thread.start();
+
+
+	
 }
 function loadPokemon(pkmn){
 	var id = pkmn.id;
