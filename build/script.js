@@ -535,62 +535,6 @@ loadAllPokemon();
 
 
 function newLevel(){
-if(DB_JSON==null){
-	
-	print("Pokemon Database not loaded yet. Please wait.");
-	ModPE.leaveGame();
-	return;
-}
-
-registerPokemon("Weepinbell", WeepinbellRenderer, "Weepinbell.png", "The leafy parts act as cutters for slashing foes. It spits a fluid that dissolves everything.", 75, 77, 79, 33, 19, 16, "070.png","pokemon/weepinbell.wav");
-registerPokemon("Squirtle", SquirtleRenderer, "Squirtle.png", "It shelters itself in its shell, then strikes back with spouts of water at every opportunity.", 10, 55, 145, 56, 7, 6, "007.png","pokemon/squirtle.wav");
-registerPokemon("Krabby", KrabbyRenderer, "Krabby.png", "If it senses danger approaching, it cloaks itself with bubbles from its mouth so it will look bigger.", 145, 43, 55, 61, 35, 29, "098.png","pokemon/krabby.wav");
-registerPokemon("Voltorb", VoltorbRenderer, "Voltorb.png", "It was discovered when Poke Balls were introduced. It is said that there is some connection.", 33, 86, 85, 120, 30, 25, "100.png","pokemon/voltorb.wav");
-registerPokemon("Diglett", DiglettRenderer, "Diglett.png", "Lives about one yard underground where it feeds on plant roots. It sometimes appears aboveground.", 33, 88, 91, 28, 40, 33, "050.png","pokemon/diglett.wav");
-registerPokemon("Mareep", MareepRenderer, "Mareep.png", "Its fluffy coat swells to double when static electricity builds up. Touching it can be shocking.", 33, 84, 85, 1, 37, 31, "179.png","pokemon/mareep.wav");
-registerPokemon("Rattata", RattataRenderer, "Rattata.png", "Living wherever there is food available, it ceaselessly scavenges for edibles the entire day.", 33, 39, 98, 44, 40, 33, "019.png","pokemon/rattata.wav");
-registerPokemon("Doduo", DoduoRenderer, "Doduo.png", "A two-headed Pokemon that was discovered as a sudden mutation. It runs at a pace of over 60 miles per hour.", 64, 98, 34, 136, 30, 25, "084.png","pokemon/doduo.wav");
-registerPokemon("Caterpie", CaterpieRenderer, "Caterpie.png", "For protection, it releases a horrible stench from the antennae on its head to drive away enemies.", 33, 98, 184, 81, 40, 33, "010.png","pokemon/caterpie.wav");
-registerPokemon("Bulbasaur", BulbasaurRenderer, "Bulbasaur.png", "A strange seed was planted on its back at birth. The plant sprouts and grows with this Pokemon.", 22, 71, 75, 73, 7, 6, "001.png","pokemon/bulbasaur.wav");
-registerPokemon("Charmander", CharmanderRenderer, "Charmander.png", "The flame on its tail indicates Charmander's life force. If it is healthy, the flame burns brightly.", 10, 43, 52, 53, 7, 6, "004.png","pokemon/charmander.wav");
-registerPokemon("Pikachu", PikachuRenderer, "Pikachu.png", "It raises its tail to check its surroundings. The tail is sometimes struck by lightning in this pose.", 10, 84, 85, 86, 30, 25, "025.png","pokemon/pikachu.wav");
-registerPokemon("Piplup", PiplupRenderer, "Piplup.png", "It doesn't like to be taken care of. It's difficult to bond with since it won't listen to its Trainer.", 33, 55, 61, 10, 7, 6, "393.png","pokemon/piplup.wav");
-registerPokemon("Chimchar", ChimcharRenderer, "Chimchar.png", "Its fiery rear end is fueled by gas made in its belly. Even rain can't extinguish the fire.", 33, 43, 52, 53, 7, 6, "390.png","pokemon/chimchar.wav");
-registerPokemon("Turtwig", TurtwigRenderer, "Turtwig.png", "Photosynthesis occurs across its body under the sun. The shell on its back is actually hardened soil.", 22, 71, 72, 75, 7, 6, "387.png","pokemon/turtwig.wav");
-registerPokemon("Pichu", PichuRenderer, "Pichu.png", "It plays with others by touching tails and setting off sparks. This appears to be a test of courage.", 33, 85, 86, 98, 30, 25, "172.png","pokemon/pichu.wav");
-registerPokemon("Gastly", GastlyRenderer, "Gastly.png", "Its body is made of gas. Despite lacking substance, it can envelop an opponent of any size and cause suffocation.", 43, 50, 122, 184, 30, 25, "092.png","pokemon/gastly.wav");
-registerPokemon("Totodile", TotodileRenderer, "Totodile.png", "It is small but rough and tough. It won't hesitate to take a bite out of anything that moves.", 10, 43, 61, 10, 7, 6, "158.png","pokemon/totodile.wav");
-registerPokemon("Chikorita", ChikoritaRenderer, "Chikorita.png", "A sweet aroma gently wafts from the leaf on its head. It is docile and loves to soak up sun rays.", 22, 71, 72, 75, 7, 6, "152.png","pokemon/chikorita.wav");
-registerPokemon("Cyndaquil", CyndaquilRenderer, "Cyndaquil.png", "It is timid and always curls itself up in a ball. If attacked, it flares up its back for protection.", 33, 98, 52, 53, 7, 6, "155.png","pokemon/cyndaquil.wav");
-registerPokemon("Butterfree", ButterfreeRenderer, "Butterfree.png", "It loves the honey of flowers and can locate flower patches that have even tiny amounts of pollen.", 17, 16, 78, 79, 7, 6, "012.png","pokemon/butterfree.wav");
-registerPokemon("Victreebel", VictreebelRenderer, "Victreebel.png", "Said to live in huge colonies deep in jungles, although no one has ever returned from there.", 22, 72, 75, 77, 7, 6, "071.png","pokemon/victreebel.wav");
-registerPokemon("Raichu", RaichuRenderer, "Raichu.png", "When it's electricity builds, it's muscles are stimulated, and it becomes more aggressive than usual.", 1, 85, 86, 84, 12, 10, "026.png","pokemon/raichu.wav");
-registerPokemon("Magnemite", MagnemiteRenderer, "Magnemite.png", "The units at the sides of its body generate antigravity energy to keep it aloft in the air.", 33, 48, 85, 86, 30, 25, "081.png","pokemon/magnemite.wav");
-registerPokemon("Trapinch", TrapinchRenderer, "Trapinch.png", "It lives in arid deserts. It makes a sloping pit trap in sand where it patiently awaits prey.", 33, 44, 222, 89, 40, 33, "328.png","pokemon/trapinch.wav");
-registerPokemon("Bonsly", BonslyRenderer, "Bonsly.png", "It prefers arid environments. It leaks water from its eyes to adjust its body's fluid levels.", 33, 24, 68, 88, 40, 33, "438.png","pokemon/bonsly.wav");
-registerPokemon("Shellder", ShellderRenderer, "Shellder.png", "It's hard shell repels any kind of attack. It is vulnerable only when its shell is open.", 33, 43, 48, 58, 30, 25, "090.png","pokemon/shellder.wav");
-registerPokemon("Psyduck", PsyduckRenderer, "Psyduck.png", "It is constantly wracked by a headache. When the headache turns intense, it begins using mysterious powers.", 55, 60, 93, 94, 30, 25, "054.png","pokemon/psyduck.wav");
-registerPokemon("Cubone", CuboneRenderer, "Cubone.png", "It wears the skull of its dead mother on its head. When it becomes lonesome, it is said to cry loudly.", 33, 98, 130, 10, 30, 25, "104.png","pokemon/cubone.wav");
-registerPokemon("Poliwhirl", PoliwhirlRenderer, "Poliwhirl.png", "It can live in or out of water. When out of water, it constantly sweats to keep its body slimy.", 1, 145, 55, 56, 19, 16, "061.png","pokemon/poliwhirl.wav");
-registerPokemon("Seel", SeelRenderer, "Seel.png", "A Pokemon that lives on icebergs. It swims in the sea using the point on its head to break up ice.", 45, 58, 62, 64, 30, 25, "086.png","pokemon/seel.wav");
-registerPokemon("Growlithe", GrowlitheRenderer, "Growlithe.png", "Very friendly and faithful to people. It will try to repel enemies by barking and biting.", 33, 43, 45, 52, 30, 25, "058.png","pokemon/growlithe.wav");
-registerPokemon("Latias", LatiasRenderer, "Latias.png", "It communicates using telepathy. Its body is covered in down that refracts light to make it invisible.", 94, 54, 82, 60, 1, 1, "380.png","pokemon/latias.wav");
-registerPokemon("Latios", LatiosRenderer, "Latios.png", "A highly intelligent Pokemon. By folding back its wings in flight, it can overtake jet planes.", 94, 54, 82, 60, 1, 1, "381.png","pokemon/latios.wav");
-registerPokemon("Ivysaur", IvysaurRenderer, "Ivysaur.png", "There is a plant bulb on its back. When it absorbs nutrients, the bulb is said to blossom into a large flower.", 33, 79, 73, 75, 7, 6, "002.png","pokemon/ivysaur.wav");
-registerPokemon("Venusaur", VenusaurRenderer, "Venusaur.png", "By spreading the broad petals of its flower and catching the sun’s rays, it fills its body with power.", 77, 75, 235, 76, 7, 6, "003.png","pokemon/venusaur.wav");
-registerPokemon("Charizard", CharizardRenderer, "Charizard.png", "When expelling a blast of superhot fire, the red flame at the tip of its tail burns more intensely.", 82, 172, 17, 83, 7, 6, "006.png","pokemon/charizard.wav");
-registerPokemon("Wartortle", WartortleRenderer, "Wartortle.png", "When tapped, this Pokemon will pull in its head, but its tail will still stick out a little bit.", 55, 39, 145, 44, 7, 6, "008.png","pokemon/wartortle.wav");
-registerPokemon("Blastoise", BlastoiseRenderer, "Blastoise.png", "It crushes its foe under its heavy body to cause fainting. In a pinch, it will withdraw inside its shell.", 229, 44, 130, 56, 7, 6, "009.png","pokemon/blastoise.wav");
-registerPokemon("Pidgey", PidgeyRenderer, "Pidgey.png", "A common sight in forests and woods. It flaps its wings at ground level to kick up blinding sand.", 33, 28, 16, 98, 40, 33, "016.png","pokemon/pidgey.wav");
-registerPokemon("Azurill", AzurillRenderer, "Azurill.png", "A Pok�mon that lives by water. It moves quickly on land by bouncing on its big tail.", 33, 39, 55, 145, 24, 20, "298.png", "pokemon/azurill.wav");
-registerPokemon("Bellsprout", BellsproutRenderer, "Bellsprout.png", "Even though its body is extremely skinny, it is blindingly fast when catching its prey.", 22, 78, 79, 73, 40, 33, "069.png", "pokemon/bellsprout.wav");
-registerPokemon("Electrode", ElectrodeRenderer, "Electrode.png", "It explodes in response to even minor stimuli. It is feared, with the nickname of 'The Bomb Ball.'", 120, 84, 153, 86, 10, 8, "101.png", "pokemon/electrode.wav");
-registerPokemon("Geodude", GeodudeRenderer, "Geodude.png", "Found in fields and mountains. Mistaking them for boulders, people often step or trip on them.", 33, 157, 205, 88, 40, 33, "074.png", "pokemon/geodude.wav");
-registerPokemon("Igglybuff", IgglybuffRenderer, "Igglybuff.png", "Instead of walking with its short legs, it moves around by bouncing on its soft, tender body.", 33, 3, 10, 230, 26, 22, "174.png", "pokemon/igglybuff.wav");
-registerPokemon("Magikarp", MagikarpRenderer, "Magikarp.png", "It is virtually worthless in terms of both power and speed. It is the most weak and pathetic Pokemon in the world.", 33, 29, 55, 56, 40, 33, "129.png", "pokemon/magikarp.wav");
-registerPokemon("Marill", MarillRenderer, "Marill.png", "The fur on its body naturally repels water. It can stay dry, even when it plays in the water.", 33, 39, 55, 56, 30, 25, "183.png", "pokemon/marill.wav");
-registerPokemon("Zubat", ZubatRenderer, "Zubat.png", "Even though it has no eyes, it can sense obstacles using ultrasonic waves it emits from its mouth.", 43, 98, 17, 141, 40, 33, "041.png", "pokemon/zubat.wav");
-registerPokemon("Sudowoodo", SudowoodoRenderer, "Sudowoodo.png", "Although it always pretends to be a tree, its composition appears more similar to rock than to vegetation.", 1, 3, 24, 21, 11, 9, "185.png", "pokemon/sudowoodo.wav");
 
 
 
@@ -605,7 +549,7 @@ showPokeInv();
 showSaveBtn();
 
 		
-loadTextFile("starterSelected.txt");
+/*loadTextFile("starterSelected.txt");
 if(loader != null)
 starterSelected = loader;
 loadTextFile("pokemonSelected.txt");
@@ -696,7 +640,7 @@ loadTextFile("pokeLvl6.txt");
 if(loader != null)
 pokeLvl6 = loader;
 
-loader = null;
+loader = null;*/
 }
 
 
@@ -717,12 +661,7 @@ function leaveGame()
 function modTick() 
 {
 
-	if(DB_JSON==null){
-	
-	print("Pokemon Database not loaded yet. Please wait.");
-	ModPE.leaveGame();
-	return;
-}
+
 
     if(gameStarted == 0) 
     {
@@ -1551,12 +1490,12 @@ function getRandomInt(min, max) {
 	if(r>PokemonDatabase.pokemon.length || r<0){
 		r = 0;
 	}
-	return r;
+	return 0;
 }
 
 function randomSpawnID(){
 	var r = Math.floor(Math.random() * pokemonSpawnRates.length-1);
-	return r;
+	return 0;
 }
 	
 function loadAllPokemon(){
