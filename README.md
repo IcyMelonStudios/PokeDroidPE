@@ -1,2 +1,2 @@
-# PokeDroidPE
-The PokeDroid PE Mod Source.
+# PokeCube PE
+**PokeCube PE Open Source**
